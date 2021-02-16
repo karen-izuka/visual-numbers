@@ -3,12 +3,12 @@ body {
 }
 
 a {
-  color: #888;
+  color: #9099A2;
   text-decoration: none;
 }
 
 a:hover {
-  color: #3949AB;
+  color: #6D7993;
 }
 
 .list-nav {
@@ -22,7 +22,7 @@ a:hover {
 }
 
 .page-header-title {
-  color: #444;
+  color: #373737;
   font-size: 24px;
   margin: 50px;
   text-align: center;
