@@ -1,0 +1,29 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: #888;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3949AB;
+}
+
+.list-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  margin: auto;
+  padding: 0;
+  width: 800px;
+}
+
+.page-header-title {
+  color: #444;
+  font-size: 24px;
+  margin: 50px;
+  text-align: center;
+}
