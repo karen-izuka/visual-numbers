@@ -1,14 +1,28 @@
+@font-face {
+  font-family: 'Calibre-Regular';
+  src: url('/assets/fonts/Calibre-Regular.woff');
+}
+
+@font-face {
+  font-family: 'Calibre-Bold';
+  src: url('/assets/fonts/Calibre-Bold.woff');
+}
+
+/* https://colorpalettes.net/color-palette-2898/ */
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Calibre-Regular';
+  font-size: 12pt;
+  letter-spacing: 0.05em;
 }
 
 a {
-  color: #9099A2;
+  color: #262526;
   text-decoration: none;
 }
 
 a:hover {
-  color: #6D7993;
+  color: #3cb5aa;
 }
 
 .list-nav {
@@ -22,8 +36,11 @@ a:hover {
 }
 
 .page-header-title {
-  color: #373737;
-  font-size: 24px;
-  margin: 50px;
+  color: #262526;
+  font-family: 'Calibre-Bold';
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin: 35px;
   text-align: center;
 }
