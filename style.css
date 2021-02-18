@@ -8,7 +8,7 @@
   src: url('/assets/fonts/Calibre-Bold.woff');
 }
 
-/* https://colorpalettes.net/color-palette-2898/ */
+/* https://colorhunt.co/palette/2763 */
 
 body {
   font-family: 'Calibre-Regular';
@@ -18,12 +18,12 @@ body {
 }
 
 a {
-  color: #0a1612;
+  color: #222831;
   text-decoration: none;
 }
 
 a:hover {
-  color: #f7ce3e;
+  color: #00adb5;
 }
 
 .list-nav {
@@ -37,7 +37,7 @@ a:hover {
 }
 
 .page-header-title {
-  color: #0a1612;
+  color: #222831;
   font-family: 'Calibre-Bold';
   font-size: 20px;
   font-weight: 700;
