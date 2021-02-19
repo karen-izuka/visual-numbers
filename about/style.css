@@ -1,19 +1,26 @@
 h2 {
   font-family: 'Calibre-Bold';
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   letter-spacing: 0.1em;
   margin: auto;
 }
 
+p {
+  font-family: 'Calibre-Regular';
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  text-rendering: optimizeLegibility;
+}
+
 .container {
   display: grid;
-  grid-template-columns: 200px 790px;
+  grid-template-columns: 200px 590px;
   column-gap: 10px;
   margin: auto;
   padding: 0;
   padding-top: 50px;
-  width: 1000px;
+  width: 800px;
 }
 
 .container-text {

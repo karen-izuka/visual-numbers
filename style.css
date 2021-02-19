@@ -33,13 +33,13 @@ a:hover {
   list-style: none;
   margin: auto;
   padding: 0;
-  width: 1000px;
+  width: 800px;
 }
 
 .page-header-title {
   color: #222831;
   font-family: 'Calibre-Bold';
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   letter-spacing: 0.2em;
   margin: 35px;
