@@ -1,0 +1,22 @@
+h2 {
+  font-family: 'Calibre-Bold';
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin: auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 200px 790px;
+  column-gap: 10px;
+  margin: auto;
+  padding: 0;
+  padding-top: 50px;
+  width: 1000px;
+}
+
+.container-text {
+  margin: auto;
+  padding: 0;
+}
