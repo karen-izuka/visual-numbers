@@ -1,29 +1,19 @@
-@font-face {
-  font-family: 'Calibre-Regular';
-  src: url('/assets/fonts/Calibre-Regular.woff');
-}
-
-@font-face {
-  font-family: 'Calibre-Bold';
-  src: url('/assets/fonts/Calibre-Bold.woff');
-}
-
-/* https://colorhunt.co/palette/2763 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
 body {
-  font-family: 'Calibre-Regular';
-  font-size: 18px;
-  letter-spacing: 0.05em;
-  text-rendering: optimizeLegibility;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
 }
 
 a {
-  color: #222831;
+  color: #373737;
   text-decoration: none;
 }
 
 a:hover {
-  color: #00adb5;
+  color: #00818a;
 }
 
 .list-nav {
@@ -37,12 +27,11 @@ a:hover {
 }
 
 .page-header-title {
-  color: #222831;
-  font-family: 'Calibre-Bold';
-  font-size: 24px;
-  font-weight: 700;
+  color: #373737;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 900;
   letter-spacing: 0.2em;
   margin: 35px;
   text-align: center;
-  text-rendering: optimizeLegibility;
 }

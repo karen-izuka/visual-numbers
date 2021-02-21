@@ -1,0 +1,50 @@
+input {
+  border: 1px solid #f0f0f0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  height: 25px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  width: 100%;
+}
+
+.container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 75px 50px;
+  margin: auto;
+  padding: 0;
+  padding-top: 50px;
+  width: 800px;
+}
+
+#color-one {
+  background-color: #373737;
+}
+
+#color-two {
+  background-color: #f4f4f4;
+}
+
+#color-three {
+  background-color: #dcd0c0;
+}
+
+#color-four {
+  background-color: #c0b283;
+}
+
+#color-five {
+  background-color: #404b69;
+}
+
+#color-six {
+  background-color: #dbedf3;
+}
+
+#color-seven {
+  background-color: #00818a;
+}
+
