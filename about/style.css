@@ -1,6 +1,5 @@
 h2 {
-  color: #373737;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -8,18 +7,13 @@ h2 {
 }
 
 p {
-  color: #373737;
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0.1em;
   line-height: 24px;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 200px 590px;
-  column-gap: 10px;
+  grid-template-columns: 1fr 3fr;
   margin: auto;
   padding: 0;
   padding-top: 50px;

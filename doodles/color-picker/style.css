@@ -1,20 +1,27 @@
 input {
   border: 1px solid #f0f0f0;
-  color: #373737;
+  color: #1a1a1a;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 400;
   height: 25px;
   letter-spacing: 0.1em;
+  overflow: hidden;
   text-align: center;
-  width: 100%;
+}
+
+p {
+  margin: auto;
+  padding: 0;
+  padding-top: 35px;
+  width: 800px;
 }
 
 .container {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 75px 50px;
+  grid-template-rows: 75px 25px;
   margin: auto;
   padding: 0;
   padding-top: 50px;
