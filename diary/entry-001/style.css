@@ -1,0 +1,12 @@
+code {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+}
+
+.container {
+  display: grid;
+  margin: auto;
+  padding: 0;
+  padding-top: 50px;
+  width: 800px;
+}

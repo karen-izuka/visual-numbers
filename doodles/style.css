@@ -1,0 +1,33 @@
+.container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: auto;
+  padding: 0;
+  padding-top: 50px;
+  width: 800px;
+}
+
+.card {
+  border: 2px solid #f0f0f0;
+  height: 150px;
+  line-height: 24px;
+}
+
+.title {
+  background-color: #f0f0f0;
+  font-size: 14px;
+  font-weight: 700;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
