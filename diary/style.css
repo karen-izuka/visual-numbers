@@ -1,3 +1,10 @@
+.card {
+  line-height: 24px;
+}
+
 .card-grid {
-  padding-top: 10px;
+  display: grid;
+  grid-template-columns: 25px 775px;
+  line-height: 24px;
+  padding-top: 5px;
 }

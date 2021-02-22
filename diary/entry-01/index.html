@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>doodles | visual numbers</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/atom-one-dark.min.css">
   <link rel="stylesheet" href="../../style.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/atom-one-dark.min.css">
 </head>
 <body>
   <header>
@@ -25,12 +25,17 @@
     <h3>Method Chaining in Pandas</h3>
     <div class="code">
       <pre><code class="python">
-          import pandas as pd
-          df = pd.read_csv('input_file.csv')
+      import pandas as pd
+
+      df = pd.read_csv('input_file.csv')
+             .query('column_a == `some value`')
+             .assign(new_column = lambda x: x['column_b'] - x['column_c'])
       </code></pre>
     </div>
     <div>
-      <p>Here is a common method chain in pandas.</p>
+      <p>Method chaining increases the readability of code and eliminates the burden of naming variables at each intermediate step. In this example, I have included my favorite "chainable" methods in pandas. I will briefly describe each, below.</p>
+      <p>Query</p>
+      <p>Assign</p>
     </div>
   </div>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>

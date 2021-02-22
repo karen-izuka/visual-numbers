@@ -4,7 +4,6 @@ input {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  height: 25px;
   letter-spacing: 0.1em;
   overflow: hidden;
   text-align: center;
@@ -15,39 +14,36 @@ p {
 }
 
 .container {
+  height: 125px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 75px 25px;
+  grid-template-rows: 3fr 1fr;
 }
 
-.notes {
-  padding-top: 20px;
-}
-
-#color-one {
+#color-01 {
   background-color: #373737;
 }
 
-#color-two {
+#color-02 {
   background-color: #f4f4f4;
 }
 
-#color-three {
+#color-03 {
   background-color: #dcd0c0;
 }
 
-#color-four {
+#color-04 {
   background-color: #c0b283;
 }
 
-#color-five {
+#color-05 {
   background-color: #404b69;
 }
 
-#color-six {
+#color-06 {
   background-color: #dbedf3;
 }
 
-#color-seven {
+#color-07 {
   background-color: #00818a;
 }
 
