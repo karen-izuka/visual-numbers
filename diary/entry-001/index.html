@@ -5,6 +5,7 @@
   <title>doodles | visual numbers</title>
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/atom-one-dark.min.css">
 </head>
 <body>
   <header>
@@ -22,11 +23,17 @@
   </header>
   <div class="container">
     <h3>Method Chaining in Pandas</h3>
+    <div class="code">
+      <pre><code class="python">
+          import pandas as pd
+          df = pd.read_csv('input_file.csv')
+      </code></pre>
+    </div>
     <div>
-      <pre>
-        <code></code>
-      </pre>
+      <p>Here is a common method chain in pandas.</p>
     </div>
   </div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
