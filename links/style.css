@@ -1,0 +1,16 @@
+.container {
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 500px;
+}
+
+.link {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.title {
+  background-color: #dbedf3;
+  height: 35px;
+  line-height: 35px;
+  padding-left: 10px;
+}
