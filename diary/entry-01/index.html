@@ -5,7 +5,7 @@
   <title>doodles | visual numbers</title>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/atom-one-dark.min.css">
   <link rel="stylesheet" href="../../style.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
   <header>
@@ -16,26 +16,41 @@
           <a href="/diary/">back to diary</a>
         </li>
         <li>
-          <a href="/">next entry</a>
+          <a href="/diary/entry-02/">next entry</a>
         </li>
       </ul>
     </div>
   </header>
   <div class="container">
-    <h3>Method Chaining in Pandas</h3>
+    <h2>Method Chaining in Pandas</h2>
     <div class="code">
       <pre><code class="python">
       import pandas as pd
 
-      df = pd.read_csv('input_file.csv')
-             .query('column_a == `some value`')
-             .assign(new_column = lambda x: x['column_b'] - x['column_c'])
+      df = (pd.read_csv('input_file.csv')
+              .query('column_a == `target value`')
+              .rename(columns={'column_y': 'column_b'})
+              .groupby(['column_a','column_b'], as_index=False).agg({'column_c': 'sum'})
+              .assign(new_column = lambda x: x['column_c'] * 100)
+              .drop(columns=['column_c'])
+              .merge(df_other, left_on='column_a', right_on='column_a', how='left')
+              .fillna(0)
+              .sort_index(axis=1))
+
+      df.to_csv('output_path/output_file.csv', index=False)
       </code></pre>
     </div>
     <div>
       <p>Method chaining increases the readability of code and eliminates the burden of naming variables at each intermediate step. In this example, I have included my favorite "chainable" methods in pandas. I will briefly describe each, below.</p>
+      <br>
       <p>Query</p>
+      <p>Rename</p>
+      <p>Group By</p>
       <p>Assign</p>
+      <p>Drop</p>
+      <p>Merge</p>
+      <p>Fill NA</p>
+      <p>Sort Index</p>
     </div>
   </div>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
