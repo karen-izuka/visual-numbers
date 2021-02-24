@@ -9,6 +9,12 @@ p {
 .card-grid {
   display: grid;
   grid-template-columns: 25px 775px;
-  line-height: 24px;
+  line-height: 25px;
   padding-top: 5px;
+}
+
+.container-description {
+  display: grid;
+  grid-template-columns: 100px 700px;
+  line-height: 25px;
 }

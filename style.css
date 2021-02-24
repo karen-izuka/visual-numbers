@@ -29,11 +29,17 @@ code {
   letter-spacing: normal;
 }
 
+h1 {
+  font-family: 'hello honey';
+  font-size: 36px;
+  font-weight: 600;
+  margin: auto;
+}
+
 h2 {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 500;
-  letter-spacing: 0.1em;
   margin: auto;
 }
 
@@ -41,7 +47,6 @@ h3 {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 500;
-  letter-spacing: 0.1em;
   margin: auto;
 }
 
@@ -66,6 +71,21 @@ pre {
   margin: auto;
   padding: 0;
   width: 800px;
+}
+
+.far {
+  color: #fc5185;
+  font-size: 14px;
+}
+
+.fas {
+  color: #fc5185;
+  font-size: 14px;
+}
+
+.fa-terminal {
+  font-size: 10px;
+  font-weight: bold;
 }
 
 .list-nav {

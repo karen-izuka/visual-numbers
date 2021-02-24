@@ -5,7 +5,3 @@ p {
 .container {
   grid-template-columns: 180px 595px;
 }
-
-#name {
-  letter-spacing: 0.15em;
-}
