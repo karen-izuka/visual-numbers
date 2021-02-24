@@ -24,43 +24,43 @@ p {
 }
 
 #color-01 {
-  background-color: #212121;
+  background-color: #323232;
   grid-column: 1;
   grid-row: 2;
 }
 
 #color-02 {
-  background-color: #424242;
+  background-color: #c8c8c8;
   grid-column: 2;
   grid-row: 2;
 }
 
 #color-03 {
-  background-color: #f5f5f5;
+  background-color: #fafafa;
   grid-column: 3;
   grid-row: 2;
 }
 
 #color-04 {
-  background-color: #364f6b;
+  background-color: #fc5185;
   grid-column: 4;
   grid-row: 2;
 }
 
 #color-05 {
-  background-color: #3fc1c9;
+  background-color: #ffe2e2;
   grid-column: 5;
   grid-row: 2;
 }
 
 #color-06 {
-  background-color: #fc5185;
+  background-color: #ffd3b5;
   grid-column: 6;
   grid-row: 2;
 }
 
 #color-07 {
-  background-color: #ffe2e2;
+  background-color: #d6c8ff;
   grid-column: 7;
   grid-row: 2;
 }

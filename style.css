@@ -81,24 +81,28 @@ pre {
 }
 
 .page-header-title {
+  height: 120px;
   line-height: 120px;
   margin: auto;
-  height: 120px;
+  padding-bottom: 25px;
+  padding-top: 25px;
   width: 800px;
 }
 
 .page-header-image {
   display: block;
+  height: 120px; 
   margin: auto;
   opacity: 0.5;
   position: relative;
-  height: 120px;  
 }
 
 .page-header-text {
   font-family: 'hello honey';
   font-size: 60px;
   font-weight: 600;
+  padding-bottom: 25px;
+  padding-top: 25px;
   position: absolute;
   text-align: center;
   top: 0px;
