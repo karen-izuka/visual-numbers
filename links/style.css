@@ -9,8 +9,8 @@
 }
 
 .title {
-  background-color: #ffe2e2;
-  height: 35px;
-  line-height: 35px;
+  background: linear-gradient(to right, #ffe2e2 0%, #ffd3b5 40%, #f4eeff 100%);
+  height: 30px;
+  line-height: 30px;
   padding-left: 10px;
 }
