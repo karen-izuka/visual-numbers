@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap');
 
 @font-face {
   font-family: 'hello honey';
@@ -13,14 +12,14 @@ a {
 }
 
 a:hover {
-  color: #3fc1c9;
+  color: #fc5185;
 }
 
 body {
   color: #000000;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.1em;
 }
 
@@ -46,7 +45,7 @@ h3 {
 }
 
 p {
-  line-height: 24px;
+  line-height: 25px;
   margin: auto;
   padding-bottom: 0;
   padding-left: 0;
@@ -55,7 +54,7 @@ p {
 }
 
 pre {
-  line-height: 24px;
+  line-height: 25px;
   margin: auto;
   padding: 0;
 }
