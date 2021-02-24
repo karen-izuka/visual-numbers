@@ -1,0 +1,24 @@
+.axis text {
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.bar {
+  fill: #ffe2e2;
+  shape-rendering: crispEdges;
+}
+
+.label {
+  fill: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+#chart {
+  background-color: #4b4b4b;
+  height: 450px;
+  width: 800px;
+}
