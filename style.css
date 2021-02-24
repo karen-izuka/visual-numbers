@@ -2,17 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap');
 
+@font-face {
+  font-family: 'hello honey';
+  src: url('assets/fonts/hello-honey.woff');
+}
+
 a {
-  color: #1a1a1a;
+  color: #212121;
   text-decoration: none;
 }
 
 a:hover {
-  color: #00818a;
+  color: #3fc1c9;
 }
 
 body {
-  color: #1a1a1a;
+  color: #212121;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -25,9 +30,10 @@ code {
 }
 
 h2 {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
+  letter-spacing: 0.1em;
   margin: auto;
 }
 
@@ -75,10 +81,9 @@ pre {
 }
 
 .page-header-title {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
+  font-family: 'hello honey';
+  font-size: 48px;
+  font-weight: 600;
   margin: 35px;
   text-align: center;
 }
