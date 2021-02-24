@@ -11,7 +11,7 @@ input {
 }
 
 .container {
-  grid-template-rows: 25px 75px 25px 50px;
+  grid-template-rows: 25px 75px 25px 100px;
 }
 
 #title {

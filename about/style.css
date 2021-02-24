@@ -1,5 +1,5 @@
 p {
-  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .container {
@@ -13,9 +13,9 @@ p {
   grid-template-rows: 30px;
   line-height: 30px;
   margin: auto;
-  padding-top: 10px;
 }
 
 .header {
   color: #fc5185;
+  padding-bottom: 20px;
 }
