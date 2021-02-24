@@ -94,7 +94,6 @@ pre {
 .list-nav {
   display: flex;
   flex-wrap: wrap;
-  font-weight: 500;
   justify-content: space-between;
   list-style: none;
   margin: auto;
