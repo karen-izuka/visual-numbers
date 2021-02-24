@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap');
-
 @font-face {
   font-family: 'hello honey';
   src: url('assets/fonts/hello-honey.woff');
@@ -30,20 +29,13 @@ code {
 }
 
 h1 {
-  font-family: 'hello honey';
-  font-size: 36px;
-  font-weight: 600;
-  margin: auto;
-}
-
-h2 {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 500;
   margin: auto;
 }
 
-h3 {
+h2 {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 500;
@@ -70,17 +62,31 @@ pre {
   width: 800px;
 }
 
-.far {
-  color: #fc5185;
-  font-size: 14px;
+.fa-envelope {
+  background: -webkit-linear-gradient(#fc5185, #ffd3b5);
+  background-clip: text;
+  font-size: 18px;
+  line-height: 30px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.fas {
+.fa-github, .fa-linkedin {
+  background: -webkit-linear-gradient(#fc5185, #ffd3b5);
+  background-clip: text;
+  font-size: 20px;
+  line-height: 30px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-calendar-check, .fa-comment-alt {
   color: #fc5185;
   font-size: 14px;
 }
 
 .fa-terminal {
+  color: #fc5185;
   font-size: 10px;
   font-weight: bold;
 }
