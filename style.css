@@ -42,6 +42,10 @@ h2 {
   margin: auto;
 }
 
+i {
+  vertical-align: middle;
+}
+
 p {
   line-height: 25px;
   margin: auto;
