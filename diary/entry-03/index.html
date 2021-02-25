@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>doodles | visual numbers</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="/../style.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <div class="page-header-title">
+      <img class="page-header-image" src="/assets/images/header-image.png">
+      <div class="page-header-text"><a href="/">Visual Numbers</a></div>
+    </div>
+    <div>
+      <ul class="list-nav">
+        <li>
+          <a href="/diary/">back to diary</a>
+        </li>
+        <li>
+          <a href="/diary/entry-04/">next entry</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <div class="container">
+    <h1>Pandas with cx_Oracle</h1>
+    <div class="code">
+      <pre><code class="python">
+      import pandas as pd
+      import cx_Oracle
+
+      dsn = cx_Oracle.makedsn(host='host', port='port', service_name='service_name')
+      con = cx_Oracle.connect(user='user_name', password='my_password', dsn=dsn)
+      df = pd.read_sql(f"""select
+                           customer_name,
+                           sku,
+                           sum(units_sold) units_sold
+                           from oracle_schema.oracle_table
+                           group by
+                           customer_name,
+                           sku""", con=con)
+      </code></pre>
+    </div>
+    <div>
+      <p>The cx_Oracle module in Python enables access to an Oracle Database. However, a typical workflow in the data analyst world requires not only the retrieval of data- but also manipulations, calculations and eventually some form of output! Did somebody say analysis?! I guess that's what analysts do, when they aren't drinking coffee or poking around on reddit.</p>
+      <br>
+      <p>In this example I demonstrate how to integrate the cx_Oracle module with pandas. Specifically, one may use the cx_Oracle module to create the dsn and database connection. This information is then passed into the pandas read_sql method to return your dataframe. Voila, time for coffee!</p>
+    </div>
+  </div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
