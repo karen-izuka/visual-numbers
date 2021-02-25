@@ -39,12 +39,10 @@
               .merge(df_other, left_on='column_a', right_on='column_a', how='left')
               .fillna(0)
               .sort_index(axis=1))
-
-      df.to_csv('output_path/output_file.csv', index=False)
       </code></pre>
     </div>
     <div>
-      <p>Method chaining increases the readability of code and eliminates the burden of naming variables at each step. In this example, I have included my favorite "chainable" methods in pandas. I have provided a tl;dr style description of each, below.</p>
+      <p>Method chaining is a pattern for performing operations on a dataframe that emphasizes continuity and a logical flow of execution. Rather than naming variables at each intermediate step, this programming style allows users to chain methods one after another, each operating on the returned dataframe as the first argument. This increases the readability of code and is space efficient as we avoid copying the entire dataframe to a new location in memory. As a former R user, this syntax is similar to the dplyr pipe operator %>%, making the transition from R to Python relatively inoffesive. In this example, I have included my favorite "chainable" methods in pandas. I have provided a tl;dr style description of each, below.</p>
       <br>
       <div class="container-description"><div>query</div><div>filters rows</div></div>
       <div class="container-description"><div>rename</div><div>renames columns</div></div>

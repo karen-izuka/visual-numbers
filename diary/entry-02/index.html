@@ -44,7 +44,7 @@
       </code></pre>
     </div>
     <div>
-      <p>The 'with' clause was introduced in the Oracle 9i release. It allows the user to give a sub-query block a name, which can be referenced within the main SQL query.</p>
+      <p>The SQL 'with' clause was introduced by Oracle in the 9i release. It allows users to give a sub-query block a name (aka sub-query refactoring), which can then be referenced within the main SQL query. When a query with a 'with' clause is executed, the query within the 'with' clause is evaluated first and the output of this evaluation is stored in a temporary relation. Then the main query is executed, utilizing the temporary relation produced. It allows users to break down complex SQL queries into smaller ones which promotes readability and makes debugging less painful.</p>
     </div>
   </div>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
