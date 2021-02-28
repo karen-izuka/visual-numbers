@@ -8,7 +8,7 @@
 a {
   color: #000000;
   text-decoration: none;
-  vertical-align: middle;
+  padding: 0;
 }
 
 a:hover {
@@ -66,16 +66,7 @@ pre {
   width: 800px;
 }
 
-.fa-envelope {
-  background: -webkit-linear-gradient(#fc5185, #ffd3b5);
-  background-clip: text;
-  font-size: 18px;
-  line-height: 30px;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.fa-github, .fa-linkedin {
+.fa-envelope, .fa-github, .fa-linkedin {
   background: -webkit-linear-gradient(#fc5185, #ffd3b5);
   background-clip: text;
   font-size: 20px;
@@ -84,7 +75,7 @@ pre {
   -webkit-text-fill-color: transparent;
 }
 
-.fa-calendar-check, .fa-comment-alt {
+.fa-calendar-check, .fa-comment-alt, .fa-heart {
   color: #fc5185;
   font-size: 14px;
 }
