@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>doodles | visual numbers</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="/../style.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <div class="page-header-title">
+      <img class="page-header-image" src="/assets/images/header-image.png">
+      <div class="page-header-text"><a href="/">Visual Numbers</a></div>
+    </div>
+    <div>
+      <ul class="list-nav">
+        <li>
+          <a href="/diary/">back to diary</a>
+        </li>
+        <li>
+          <a href="/diary/entry-01/">next entry</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <div class="container">
+    <h1>Integrating Google Sheets with d3.js</h1>
+    <div class="code">
+      <pre><code class="javascript">
+      const key = '1XGL8PIsG3yqik2yeu_KSOW_uyvP0DvgK0T91Zz6s2Wo';
+      const sheet_name = 'Sheet1';
+      const csv = `https://docs.google.com/spreadsheets/d/${key}gviz/tq?tqx=out:\
+      csv&sheet=${sheet_name}`;
+      const load = async () => {
+        const data = await d3.csv(csv, ({name, value}) => ({
+          name: name, value: +value
+        }));
+        console.log(data);
+      }
+      </code></pre>
+    </div>
+    <div>
+      <p>Steps:</p>
+      <br>
+      <p>Step 1: Create new google sheet and populate with data</p>
+      <p>Step 2: Click File > Pubish to web</p>
+      <p>Step 3: Copy the url that appears in the popup box</p>
+      <p>Step 4: Note that the url specifies a key to the workbook and a sheet name</p>
+      <p>Step 5: I prefer to include the key and sheet name as variables for code reusability</p>
+      <p>Step 6: Pass the csv variable into the d3.csv function and you should be ready to go!</p>
+    </div>
+  </div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
