@@ -7,10 +7,15 @@ const chart = data => {
   const margin = {top: 10, right: 10, bottom: 10, left: 10};
   const width = 800;
   const height = 450;
+  const div = d3.select('#chart')
+    .append('div')
+    .attr('class', 'tooltip')
+    .style('opacity', 0);
   const svg = d3.select('#chart')
     .append('svg')
     .attr('width', width)
     .attr('height', height);
+  const format = d3.format(',');
   const sankey = d3.sankey()
     .nodeWidth(25)
     .nodePadding(10)
@@ -28,7 +33,20 @@ const chart = data => {
     .attr('width', d => d.x1 - d.x0)
     .attr('height', d => d.y1 - d.y0)
     .attr('fill', d => color(d.name))
-    .attr('opacity', 0.8);
+    .attr('opacity', 0.8)
+    .on('mouseover', function(e, d) {
+      div.transition()
+        .duration(20)
+        .style('opacity', 0.8)
+      div.html(`<div>${(d.name).replace(/0 |1 |2 /g, '')}</div><div>${format(d.value)} villagers</div>`)
+        .style('left', `${(e.pageX)}px`)
+        .style('top', `${(e.pageY)}px`);
+    })
+    .on('mouseout', function(e, d) {
+      div.transition()
+        .duration(20)
+        .style('opacity', 0);
+    });
   const link = svg.append('g')
     .attr('fill', 'none')
     .attr('stroke-opacity', 0.6)
@@ -50,7 +68,20 @@ const chart = data => {
   link.append('path')
     .attr('d', d3.sankeyLinkHorizontal())
     .attr('stroke', (d,i) => `url(#linear-gradient-${i})`)
-    .attr('stroke-width', d => Math.max(1, d.width));
+    .attr('stroke-width', d => Math.max(1, d.width))
+    .on('mouseover', function(e, d) {
+      div.transition()
+        .duration(20)
+        .style('opacity', 0.8)
+      div.html(`<div>${(d.source.name).replace(/0 |1 |2 /g, '')} → ${(d.target.name).replace(/0 |1 |2 /g, '')}</div><div>${format(d.value)} villagers</div>`)
+        .style('left', `${(e.pageX)}px`)
+        .style('top', `${(e.pageY)}px`);
+    })
+    .on('mouseout', function(e, d) {
+      div.transition()
+        .duration(20)
+        .style('opacity', 0);
+    });
   const text = svg.append('g')
     .selectAll('text')
     .data(graph.nodes)
