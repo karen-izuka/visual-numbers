@@ -30,15 +30,15 @@
       <pre><code class="python">
       import pandas as pd
       
-      df = pd.read_csv('sales_by_customer.csv')
-      df['sales_by_country'] = df.groupby(['country'])['sales'].transform('sum')
-      df['sales_pct'] = df['sales'] / df['sales_by_country']
+      df = (pd.read_csv('sales_by_customer.csv')
+              .assign(reg_sales = lambda x : x.groupby(['region'])['sales'].transform('sum'))
+              .assign(customer_pct_region = lambda x : x['sales'] / x['reg_sales']))
       </code></pre>
     </div>
     <div>
-      <p>Oftentimes I find myself needing a column calculated at a more summarized level than the current dataframe I am operating on. In the traditional SQL world, this would require creating another dataframe that aggregates the desired dimensions and measures only to join it back to the original dataframe. How annoying! Enter transform! This function allows the user to calculate values at the desired level of granularity all within the given dataframe! This is great for homebodies like me that don't like to leave their apartments, or their dataframes.</p>
+      <p>Pairing the group by and transform functions in pandas allows users to calculate values at many levels of granularity all within one dataframe!</p>
       <br>
-      <p>I often use this function to answer questions such as: (1) What is a product's revenue contribution to the overall company? (2) What percentage of 2020 sales happened in February? (3) How does a certain customer's price point for a given product compare to the average price point across all customers?</p>
+      <p>In this example, I have a table of sales transactions by customer, but want to see how each customer's sales contribute to their particular region. This technique avoids the hassle of having to create a separate dataframe that sums sales by region only to join that dataframe back to the original dataframe by customer.</p>
     </div>
   </div>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
