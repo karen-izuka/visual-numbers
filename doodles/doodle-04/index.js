@@ -1,17 +1,17 @@
-const parseTime = d3.timeParse('%m/%d/%Y');
+const parseTime = d3.timeParse('%Y-%m-%d');
 
 const load = async () => {
-  const data = await d3.csv('data.csv', ({location, date, temperature, index}) => ({
-    location: location, date: parseTime(date), temperature: +temperature, index: +index
+  const data = await d3.csv('data.csv', ({index,location,date,temperature}) => ({
+    index: +index, location: location, date: parseTime(date), temperature: +temperature, index: +index
   }));
   chart(data);
 }
 
 const chart = data => {
   //chart
-  const margin = {top: 25, right: 50, bottom: 25, left: 50};
+  const margin = {top: 25, right: 50, bottom: 10, left: 50};
   const width = 800 - margin.left - margin.right;
-  const height = 200 - margin.top - margin.bottom;
+  const height = 300 - margin.top - margin.bottom;
   const svg = d3.select('#chart')
     .append('svg')
     .attr('width', width + margin.left + margin.right)
@@ -29,7 +29,7 @@ const chart = data => {
     .range([0, height])
     .padding(0.2);
   const color = d3.scaleLinear()
-    .domain([20,40,60,80,100,110])
+    .domain([10,20,40,60,80,100,100])
     .range(['#A2ACEB','#9BE0F1','#B4F6A4','#F7FAA1','#FCDA9C','#F898A4']);
   const xAxis = g => g
     .call(d3.axisTop(x2).tickSizeOuter(0).tickFormat(d3.timeFormat('%b')));
