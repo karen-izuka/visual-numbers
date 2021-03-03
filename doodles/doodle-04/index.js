@@ -22,7 +22,7 @@ const chart = data => {
     .domain([...Array(365).keys()])
     .range([0, width]);
   const x2 = d3.scaleTime()
-    .domain([new Date('01-01-2021'), new Date('12-31-2021')])
+    .domain([new Date('01-01-2020'), new Date('01-01-2021')])
     .range([0, width]);
   const y = d3.scaleBand()
     .domain(data.map(d => d.location))
@@ -30,7 +30,7 @@ const chart = data => {
     .padding(0.2);
   const color = d3.scaleLinear()
     .domain([10,20,40,60,80,100,100])
-    .range(['#A2ACEB','#9BE0F1','#B4F6A4','#F7FAA1','#FCDA9C','#F898A4']);
+    .range(['#CC99C9','#9EC1CF','#9EE09E','#FDFD97','#FEB144','#FF6663']);
   const xAxis = g => g
     .call(d3.axisTop(x2).tickSizeOuter(0).tickFormat(d3.timeFormat('%b')));
   const yAxis = g => g
