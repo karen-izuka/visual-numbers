@@ -1,0 +1,37 @@
+.axis text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+}
+
+.focus img {
+  fill: #fc5185;
+  stroke: #fc5185;
+}
+
+.focus text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.hover-line {
+  stroke: #fc5185;
+  stroke-width: 2px;
+  stroke-dasharray: 3,3;
+}
+
+.line {
+  fill: none;
+  stroke: #fc5185;
+  stroke-width: 2px;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.rect {
+  fill: #ffffff;
+  stroke: #fc5185;
+}
