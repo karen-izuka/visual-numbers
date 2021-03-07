@@ -5,6 +5,9 @@
   src: url('assets/fonts/hello-honey.woff');
 }
 
+/* https://www.schemecolor.com/unicorn-bliss.php */
+/* https://www.schemecolor.com/very-light-rainbow.php */
+
 a {
   color: #000000;
   text-decoration: none;
@@ -12,11 +15,11 @@ a {
 }
 
 a.inline {
-  color: #00adb5;
+  color: #F186BF;
 }
 
 a:hover {
-  color: #fc5185;
+  color: #F186BF;
 }
 
 body {
@@ -71,7 +74,7 @@ pre {
 }
 
 .fa-envelope, .fa-github, .fa-linkedin {
-  background: -webkit-linear-gradient(#fc5185, #ffd3b5);
+  background: -webkit-linear-gradient(#F186BF, #E3E3FF);
   background-clip: text;
   font-size: 20px;
   line-height: 30px;
@@ -80,12 +83,12 @@ pre {
 }
 
 .fa-calendar-check, .fa-comment-alt, .fa-heart {
-  color: #fc5185;
+  color: #F186BF;
   font-size: 14px;
 }
 
 .fa-terminal {
-  color: #fc5185;
+  color: #F186BF;
   font-size: 10px;
   font-weight: bold;
 }
@@ -114,7 +117,7 @@ pre {
   display: block;
   height: 120px; 
   margin: auto;
-  opacity: 0.5;
+  opacity: 0.4;
   position: relative;
 }
 

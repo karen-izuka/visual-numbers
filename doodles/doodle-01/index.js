@@ -1,4 +1,4 @@
-const colorsString = ['01', '02', '03', '04', '05', '06', '07'];
+const colorsString = ['01', '02', '03', '04', '05', '06', '07','08','09'];
 
 for (let i = 0; i < colorsString.length; i++) {
   document.getElementById(`input-${colorsString[i]}`).addEventListener('keyup', function(event) {

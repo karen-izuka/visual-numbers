@@ -4,7 +4,6 @@ const load = async () => {
 }
 
 const chart = data => {
-  const margin = {top: 10, right: 10, bottom: 10, left: 10};
   const width = 800;
   const height = 450;
   const div = d3.select('#chart')
@@ -23,7 +22,7 @@ const chart = data => {
   const graph = sankey(data);
   const color = d3.scaleOrdinal()
     .domain(graph.nodes.map(d => d.name))
-    .range(['#fc5185','#B1F4FB','#ffc8c8','#fbc687','#dcd6f7','#BBF8CA','#FFEC54','#62d2a2','#fdc7ff']);
+    .range(['#F186BF','#B2F6F0','#F6B09D','#FFEEE2','#F6F39F','#FCFADE','#B3EE9A','#E2FCE6','#B2B7F6','#E3E3FF','#FFDBDB','#DFF2FD']);
   const node = svg.append('g')
     .selectAll('rect')
     .data(graph.nodes)

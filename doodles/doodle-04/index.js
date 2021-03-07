@@ -9,9 +9,9 @@ const load = async () => {
 
 const chart = data => {
   //chart
-  const margin = {top: 25, right: 15, bottom: 10, left: 50};
+  const margin = {top: 25, right: 15, bottom: 0, left: 65};
   const width = 800 - margin.left - margin.right;
-  const height = 300 - margin.top - margin.bottom;
+  const height = 450 - margin.top - margin.bottom;
   const svg = d3.select('#chart')
     .append('svg')
     .attr('width', width + margin.left + margin.right)
@@ -30,7 +30,7 @@ const chart = data => {
     .padding(0.2);
   const color = d3.scaleLinear()
     .domain([10,20,40,60,80,100,100])
-    .range(['#CC99FF','#A9D1F7','#B4F0A7','#FFFFBF','#FFDFBE','#FFB1B0']);
+    .range(['#B2B7F6','#B2F6F0','#B3EE9A','#F6F39F','#F6B09D','#F186BF']);
   const xAxis = g => g
     .call(d3.axisTop(x2).tickSizeOuter(0).tickFormat(d3.timeFormat('%b')));
   const yAxis = g => g
