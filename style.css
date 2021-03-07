@@ -6,7 +6,6 @@
 }
 
 /* https://www.schemecolor.com/unicorn-bliss.php */
-/* https://www.schemecolor.com/very-light-rainbow.php */
 
 a {
   color: #000000;
@@ -117,7 +116,7 @@ pre {
   display: block;
   height: 120px; 
   margin: auto;
-  opacity: 0.4;
+  opacity: 0.5;
   position: relative;
 }
 
