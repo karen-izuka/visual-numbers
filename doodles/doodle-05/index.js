@@ -35,19 +35,33 @@ const chart = (data_01, data_02) => {
   const yAxis = g => g
     .call(d3.axisLeft(y).tickFormat(format))
     .call(g => g.select('.domain').remove());
-  const colors = ['#fc5185','#ffd3b5','#ffe2e2','#ffffff'];
+  const colors = ['#fc5185','#ffd3b5','#ffffff'];
   const defs = svg.append('defs');
-  const gradient = defs.append('linearGradient')
+  const linearGradient = defs.append('linearGradient')
     .attr('id', 'linear-gradient')
     .attr('x1', '0%')
     .attr('x2', '0%')
     .attr('y1', '0%')
     .attr('y2', '100%');
-  gradient.selectAll('stop')
+  linearGradient.selectAll('stop')
     .data(colors)
     .join('stop')
     .attr('offset', (d, i) => i/colors.length)
     .attr('stop-color', d => d);
+  const radialGradient = defs.append('radialGradient')
+    .attr('id', 'radial-gradient')
+    .attr('cx', '30%')
+    .attr('cy', '30%')
+    .attr('r', '65%');
+  radialGradient.append('stop')
+    .attr('offset', '0%')
+    .attr('stop-color', d3.rgb('#00adb5').brighter(1));
+  radialGradient.append('stop')
+    .attr('offset', '50%')
+    .attr('stop-color', '#00adb5');
+  radialGradient.append('stop')
+    .attr('offset', '100%')
+    .attr('stop-color', d3.rgb('#00adb5').darker(0.5));
   const area = d3.area()
     .x(d => x(d.date))
     .y0(y(0))
@@ -81,7 +95,7 @@ const chart = (data_01, data_02) => {
     .attr('cx', d => x(d.date))
     .attr('cy', d => y(d.stock_price))
     .attr('r', 5)
-    .attr('fill', '#ba52ed');
+    .attr('fill', 'url(#radial-gradient)');
 
   const focus = svg.append('g')
     .attr('class', 'focus')
@@ -90,10 +104,6 @@ const chart = (data_01, data_02) => {
     .attr('class', 'x-hover-line hover-line')
     .attr('y1', 0)
     .attr('y2', height);
-  focus.append('line')
-    .attr('class', 'y-hover-line hover-line')
-    .attr('x1', width)
-    .attr('x2', width);
   focus.append('circle')
     .attr('r', 5);
   focus.append('rect')

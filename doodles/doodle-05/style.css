@@ -1,11 +1,15 @@
+svg {
+  overflow: visible;
+}
+
 .axis text {
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
 }
 
 .focus circle {
-  fill: #000000;
-  stroke: #000000;
+  fill: #fc5185;
+  stroke: #fc5185;
 }
 
 .focus text {
@@ -15,7 +19,7 @@
 }
 
 .hover-line {
-  stroke: #000000;
+  stroke: #fc5185;
   stroke-width: 2px;
   stroke-dasharray: 3,3;
 }
@@ -23,7 +27,7 @@
 .line {
   fill: none;
   stroke: #fc5185;
-  stroke-width: 2px;
+  stroke-width: 1.5px;
 }
 
 .overlay {
