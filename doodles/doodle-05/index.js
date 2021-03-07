@@ -1,33 +1,33 @@
 const parseTime = d3.timeParse('%Y-%m-%d');
 
 const load = async () => {
-  const data = await d3.csv('data.csv', ({date, stock_price}) => ({
+  const data_01 = await d3.csv('data_01.csv', ({date, stock_price}) => ({
     date: parseTime(date), stock_price: +stock_price
   }));
-  chart(data);
+  const data_02 = await d3.csv('data_02.csv', ({date, stock_price}) => ({
+    date: parseTime(date), stock_price: +stock_price
+  }));
+  chart(data_01, data_02);
 }
 
-const chart = data => {
+const chart = (data_01, data_02) => {
   const bisectDate = d3.bisector(d => d.date).left;
   const format = d3.format('$,d');
-
-
-  console.log(data)
-  const margin = {top: 25, right: 25, bottom: 30, left: 50};
+  const format_date = d3.timeFormat('%m/%d/%y')
+  const margin = {top: 25, right: 0, bottom: 30, left: 35};
   const width = 800 - margin.left - margin.right;
-  const height = 450 - margin.top - margin.bottom;
+  const height = 455 - margin.top - margin.bottom;
   const svg = d3.select('#chart')
     .append('svg')
     .attr('width', width + margin.left + margin.right)
     .attr('height', height + margin.top + margin.bottom)
     .append('g')
     .attr('transform', `translate(${margin.left}, ${margin.top})`);
-  
   const x = d3.scaleTime()
-    .domain(d3.extent(data, d => d.date))
+    .domain(d3.extent(data_01, d => d.date))
     .range([0, width]);
   const y = d3.scaleLinear()
-    .domain([0, d3.max(data, d => d.stock_price)*1.1])
+    .domain([0, d3.max(data_01, d => d.stock_price)+10])
     .range([height, 0]);
   const xAxis = g => g
     .attr('transform', `translate(0, ${height})`)
@@ -35,7 +35,7 @@ const chart = data => {
   const yAxis = g => g
     .call(d3.axisLeft(y).tickFormat(format))
     .call(g => g.select('.domain').remove());
-  const colors = ['#fc5185','#ffd3b5','#ffffff'];
+  const colors = ['#fc5185','#ffd3b5','#ffe2e2','#ffffff'];
   const defs = svg.append('defs');
   const gradient = defs.append('linearGradient')
     .attr('id', 'linear-gradient')
@@ -67,14 +67,21 @@ const chart = data => {
     .attr('class', 'axis')
     .call(yAxis);
   const pathA = svg.append('path')
-    .datum(data)
+    .datum(data_01)
     .attr('d', area)
     .attr('fill', 'url(#linear-gradient)')
-    .attr('fill-opacity', 0.3);
+    .attr('fill-opacity', 0.2);
   const pathB = svg.append('path')
-    .datum(data)
+    .datum(data_01)
     .attr('class', 'line')
     .attr('d', line);
+  const circle = svg.selectAll('.karen')
+    .data(data_02)
+    .join('circle')
+    .attr('cx', d => x(d.date))
+    .attr('cy', d => y(d.stock_price))
+    .attr('r', 5)
+    .attr('fill', '#ba52ed');
 
   const focus = svg.append('g')
     .attr('class', 'focus')
@@ -87,14 +94,12 @@ const chart = data => {
     .attr('class', 'y-hover-line hover-line')
     .attr('x1', width)
     .attr('x2', width);
-  focus.append('img')
-    .attr('src','https://www.visualnumbers.net/assets/svg/heart.svg')
-    .attr('width', 20)
-    .attr('height', 20);
+  focus.append('circle')
+    .attr('r', 5);
   focus.append('rect')
     .attr('class', 'rect')
-    .attr('transform', `translate(${-50/2}, ${-(75/2)})`)
-    .attr('width', 50)
+    .attr('transform', `translate(${-125/2}, ${-(75/2)})`)
+    .attr('width', 125)
     .attr('height', 25)
     .attr('rx', 10);
   focus.append('text')
@@ -102,7 +107,6 @@ const chart = data => {
     .attr('y', -25)
     .attr('dy', '.35em')
     .attr('text-anchor', 'middle');
-  
   const overlay = svg.append('rect')
     .attr('class', 'overlay')
     .attr('width', width)
@@ -110,19 +114,17 @@ const chart = data => {
     .on('mouseover', () => focus.style('display', null))
     .on('mouseout', () => focus.style('display', 'none'))
     .on('mousemove', mousemove);
-
   function mousemove() {
     const x0 = x.invert(d3.pointer(event)[0]);
-    const i = bisectDate(data, x0, 1);
-    const d0 = data[i-1];
-    const d1 = data[i];
+    const i = bisectDate(data_01, x0, 1);
+    const d0 = data_01[i-1];
+    const d1 = data_01[i];
     const d = x0 - d0.year > d1.year - x0 ? d1 : d0;
     focus.attr('transform', `translate(${x(d.date)}, ${y(d.stock_price)})`);
-    focus.select('text').text(format(d.stock_price));
+    focus.select('text').text(`${format_date(d.date)} ${format(d.stock_price)}`);
     focus.select('.x-hover-line').attr('y2', height - y(d.stock_price));
     focus.select('.y-hover-line').attr('x2', width + width);
-  }
-  
+  } 
 }
 
 load();

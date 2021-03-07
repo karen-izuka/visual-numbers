@@ -9,7 +9,7 @@ const load = async () => {
 
 const chart = data => {
   //chart
-  const margin = {top: 25, right: 50, bottom: 10, left: 50};
+  const margin = {top: 25, right: 15, bottom: 10, left: 50};
   const width = 800 - margin.left - margin.right;
   const height = 300 - margin.top - margin.bottom;
   const svg = d3.select('#chart')
