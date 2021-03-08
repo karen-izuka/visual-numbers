@@ -5,7 +5,7 @@
   src: url('assets/fonts/hello-honey.woff');
 }
 
-/* '#ffdfdf','#ffecda','#f6f7d7','#e8ffe8','#d6e4f0','#f4eeff' */
+/* '#fff0f5','#ffebbb','#f9fce1','#eaffd0','#e3fdfd','#f8e1f4' */
 
 a {
   color: #000000;
@@ -73,7 +73,7 @@ pre {
 }
 
 .fa-envelope, .fa-github, .fa-linkedin {
-  background: -webkit-linear-gradient(#fc5c9c, #ffdfdf);
+  background: -webkit-linear-gradient(#fc5c9c, #fbc687);
   background-clip: text;
   font-size: 20px;
   line-height: 30px;

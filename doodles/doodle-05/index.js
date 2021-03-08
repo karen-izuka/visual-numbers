@@ -35,7 +35,7 @@ const chart = (data_01, data_02) => {
   const yAxis = g => g
     .call(d3.axisLeft(y).tickFormat(format))
     .call(g => g.select('.domain').remove());
-  const colors = ['#fc5c9c','#ffdfdf','#ffffff'];
+  const colors = ['#fc5c9c','#fbc687','#ffffff'];
   const defs = svg.append('defs');
   const linearGradient = defs.append('linearGradient')
     .attr('id', 'linear-gradient')
