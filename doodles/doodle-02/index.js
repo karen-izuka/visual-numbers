@@ -6,7 +6,6 @@ const load = async () => {
 }
 
 const draw = data => {
-  console.log(data);
   const margin = {top: 25, right: 25, bottom: 50, left: 25};
   const width = 800 - margin.left - margin.right;
   const height = 450 - margin.top - margin.bottom;

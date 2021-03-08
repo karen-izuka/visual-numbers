@@ -7,10 +7,10 @@ const load = async () => {
   const data_02 = await d3.csv('data_02.csv', ({date, stock_price}) => ({
     date: parseTime(date), stock_price: +stock_price
   }));
-  chart(data_01, data_02);
+  draw(data_01, data_02);
 }
 
-const chart = (data_01, data_02) => {
+const draw = (data_01, data_02) => {
   const bisectDate = d3.bisector(d => d.date).left;
   const format = d3.format('$,d');
   const format_date = d3.timeFormat('%m/%d/%y')

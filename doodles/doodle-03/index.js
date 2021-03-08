@@ -1,9 +1,9 @@
 const load = async () => {
   const data = await d3.json('data.json');
-  chart(data);
+  draw(data);
 }
 
-const chart = data => {
+const draw = data => {
   const width = 800;
   const height = 450;
   const div = d3.select('#chart')
@@ -22,7 +22,8 @@ const chart = data => {
   const graph = sankey(data);
   const color = d3.scaleOrdinal()
     .domain(graph.nodes.map(d => d.name))
-    .range(['#fc5c9c','#11cbd7','#fff591','#fbc687','#d89cf6','#b2e672','#f0e3ff','#a8e6cf','#ffcee4']);
+    .range(['#fc5c9c','#11cbd7','#fff591','#fbc687','#d89cf6','#b2e672',
+            '#55e9bc','#eab4f8','#a4f6f9','#fa9191']);
   const node = svg.append('g')
     .selectAll('rect')
     .data(graph.nodes)

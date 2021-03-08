@@ -4,10 +4,10 @@ const load = async () => {
   const data = await d3.csv('data.csv', ({index,location,date,temperature}) => ({
     index: +index, location: location, date: parseTime(date), temperature: +temperature, index: +index
   }));
-  chart(data);
+  draw(data);
 }
 
-const chart = data => {
+const draw = data => {
   //chart
   const margin = {top: 25, right: 15, bottom: 0, left: 65};
   const width = 800 - margin.left - margin.right;
