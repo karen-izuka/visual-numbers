@@ -38,37 +38,37 @@ input {
 }
 
 #color-04 {
-  background-color: #F186BF;
+  background-color: #fc5c9c;
   grid-column: 4;
   grid-row: 2;
 }
 
 #color-05 {
-  background-color: #F6B09D;
+  background-color: #fab57a;
   grid-column: 5;
   grid-row: 2;
 }
 
 #color-06 {
-  background-color: #F6F39F;
+  background-color: #fff591;
   grid-column: 6;
   grid-row: 2;
 }
 
 #color-07 {
-  background-color: #B3EE9A;
+  background-color: #b2e672;
   grid-column: 7;
   grid-row: 2;
 }
 
 #color-08 {
-  background-color: #B2F6F0;
+  background-color: #11cbd7;
   grid-column: 8;
   grid-row: 2;
 }
 
 #color-09 {
-  background-color: #B2B7F6;
+  background-color: #cca2e1;
   grid-column: 9;
   grid-row: 2;
 }

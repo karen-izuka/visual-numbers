@@ -35,7 +35,7 @@ const chart = (data_01, data_02) => {
   const yAxis = g => g
     .call(d3.axisLeft(y).tickFormat(format))
     .call(g => g.select('.domain').remove());
-  const colors = ['#F186BF','#F6B09D','#ffffff'];
+  const colors = ['#fc5c9c','#ffdfdf','#ffffff'];
   const defs = svg.append('defs');
   const linearGradient = defs.append('linearGradient')
     .attr('id', 'linear-gradient')
@@ -55,13 +55,13 @@ const chart = (data_01, data_02) => {
     .attr('r', '65%');
   radialGradient.append('stop')
     .attr('offset', '0%')
-    .attr('stop-color', d3.rgb('#B2F6F0').brighter(1));
+    .attr('stop-color', d3.rgb('#11cbd7').brighter(1));
   radialGradient.append('stop')
     .attr('offset', '50%')
-    .attr('stop-color', '#B2F6F0');
+    .attr('stop-color', '#11cbd7');
   radialGradient.append('stop')
     .attr('offset', '100%')
-    .attr('stop-color', d3.rgb('#B2F6F0').darker(1));
+    .attr('stop-color', d3.rgb('#11cbd7').darker(1));
   const area = d3.area()
     .x(d => x(d.date))
     .y0(y(0))

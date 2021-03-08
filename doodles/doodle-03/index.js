@@ -22,8 +22,7 @@ const chart = data => {
   const graph = sankey(data);
   const color = d3.scaleOrdinal()
     .domain(graph.nodes.map(d => d.name))
-    .range(['#F186BF','#B2F6F0','#F6B09D','#F6F39F','#B3EE9A','#B2B7F6',
-            '#fff0f5','#ffd3b6','#fff8d2','#e0ece4','#dff5f2','#fbeeff']);
+    .range(['#fc5c9c','#11cbd7','#fff591','#fab57a','#cca2e1','#b2e672']);
   const node = svg.append('g')
     .selectAll('rect')
     .data(graph.nodes)

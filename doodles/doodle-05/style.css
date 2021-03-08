@@ -8,8 +8,8 @@ svg {
 }
 
 .focus circle {
-  fill: #F186BF;
-  stroke: #F186BF;
+  fill: #fc5c9c;
+  stroke: #fc5c9c;
 }
 
 .focus text {
@@ -19,14 +19,14 @@ svg {
 }
 
 .hover-line {
-  stroke: #F186BF;
+  stroke: #fc5c9c;
   stroke-width: 2px;
   stroke-dasharray: 3,3;
 }
 
 .line {
   fill: none;
-  stroke: #F186BF;
+  stroke: #fc5c9c;
   stroke-width: 1.5px;
 }
 

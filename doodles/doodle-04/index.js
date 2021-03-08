@@ -30,7 +30,7 @@ const chart = data => {
     .padding(0.2);
   const color = d3.scaleLinear()
     .domain([10,20,40,60,80,100,100])
-    .range(['#B2B7F6','#B2F6F0','#B3EE9A','#F6F39F','#F6B09D','#F186BF']);
+    .range(['#cca2e1','#11cbd7','#b2e672','#fff591','#fab57a','#fc5c9c']);
   const xAxis = g => g
     .call(d3.axisTop(x2).tickSizeOuter(0).tickFormat(d3.timeFormat('%b')));
   const yAxis = g => g
