@@ -48,6 +48,10 @@ h2 {
   margin: auto;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 i {
   vertical-align: middle;
 }
