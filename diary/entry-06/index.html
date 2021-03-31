@@ -64,7 +64,7 @@
             entries.append(
               {'name': v,
                'children': create_entries(
-                 df.iloc[df.iloc[:,0] == v].iloc[:,1:])})
+                 df.loc[df.iloc[:,0] == v].iloc[:,1:])})
         return entries
 
       if __name__ == '__main__':
