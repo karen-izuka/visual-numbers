@@ -54,17 +54,13 @@
         if df.shape[1] == 2:
           #iterate on rows
           for i in range(df.shape[0]):
-            entries.append(
-              {'name': df.iloc[i,0],
-               df.columns[-1]: df.iloc[i,1]})
+            entries.append({'name': df.iloc[i,0], df.columns[-1]: df.iloc[i,1]})
         #recursive case
         else:
           values = set(df.iloc[:,0])
           for v in values:
             entries.append(
-              {'name': v,
-               'children': create_entries(
-                 df.loc[df.iloc[:,0] == v].iloc[:,1:])})
+              {'name': v, 'children': create_entries(df.loc[df.iloc[:,0] == v].iloc[:,1:])})
         return entries
 
       if __name__ == '__main__':
