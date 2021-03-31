@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>doodles | visual numbers</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/rainbow.min.css">
+  <link rel="stylesheet" href="/../style.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+</head>
+<body>
+  <header>
+    <div class="page-header-title">
+      <img class="page-header-image" src="/assets/images/header-image.png">
+      <div class="page-header-text"><a href="/">Visual Numbers</a></div>
+    </div>
+    <div>
+      <ul class="list-nav">
+        <li>
+          <a href="/diary/">back to diary</a>
+        </li>
+        <li>
+          <a href="/diary/entry-01/">next entry</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <div class="container">
+    <h1>Turning Tabular Data into a Nested JSON File</h1>
+    <div class="code">
+      <pre><code class="python">
+      import click
+      import io
+      import json
+      import pandas as pd
+      
+      def main():
+        try:
+          input_file = 'input_location/input_file.csv'
+          output_file = 'output_location/data.json'
+          df = pd.read_csv(f'{input_file}')
+          d = {'name': 'root', 'children': create_entries(df)}
+          data = json.dumps(d)
+          load = json.loads(data)
+          with open(f'{output_file}', 'w') as f:
+            json.dump(load, f)
+          click.echo(f'Success!')
+        except Exception as e:
+          click.echo(f'Process failed because {e}')
+    
+      def create_entries(df):
+        entries = []
+        #base case - only 2 columns left
+        if df.shape[1] == 2:
+          #iterate on rows
+          for i in range(df.shape[0]):
+            entries.append(
+              {'name': df.iloc[i,0],
+               df.columns[-1]: df.iloc[i,1]})
+        #recursive case
+        else:
+          values = set(df.iloc[:,0])
+          for v in values:
+            entries.append(
+              {'name': v,
+               'children': create_entries(
+                 df.iloc[df.iloc[:,0] == v].iloc[:,1:])})
+        return entries
+
+      if __name__ == '__main__':
+        main()
+      </code></pre>
+    </div>
+    <div>
+        <p>I often find myself needing data structured as a nested json file for data visualizations such as treemaps, icicle charts and circle packs. However, raw data most often comes in the form of a csv or excel sheet. As such, I created this python function to help me convert tabular data structures into nested json files.</p>
+    </div>
+  </div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
