@@ -48,20 +48,6 @@ const draw = (data_01, data_02) => {
     .join('stop')
     .attr('offset', (d, i) => i/colors.length)
     .attr('stop-color', d => d);
-  // const radialGradient = defs.append('radialGradient')
-  //   .attr('id', 'radial-gradient')
-  //   .attr('cx', '30%')
-  //   .attr('cy', '30%')
-  //   .attr('r', '65%');
-  // radialGradient.append('stop')
-  //   .attr('offset', '0%')
-  //   .attr('stop-color', d3.rgb('#11cbd7').brighter(1));
-  // radialGradient.append('stop')
-  //   .attr('offset', '50%')
-  //   .attr('stop-color', '#11cbd7');
-  // radialGradient.append('stop')
-  //   .attr('offset', '100%')
-  //   .attr('stop-color', d3.rgb('#11cbd7').darker(1));
   const area = d3.area()
     .x(d => x(d.date))
     .y0(y(0))
@@ -89,13 +75,6 @@ const draw = (data_01, data_02) => {
     .datum(data_01)
     .attr('class', 'line')
     .attr('d', line);
-  // const circle = svg.selectAll('.karen')
-  //   .data(data_02)
-  //   .join('circle')
-  //   .attr('cx', d => x(d.date))
-  //   .attr('cy', d => y(d.stock_price))
-  //   .attr('r', 5)
-  //   .attr('fill', 'url(#radial-gradient)');
 
   const focus = svg.append('g')
     .attr('class', 'focus')

@@ -1,0 +1,12 @@
+.lAxis line, .lAxis path {
+  stroke: #ffffff;
+}
+
+.lAxis text {
+  font-size: 12px;
+}
+
+#legend {
+  display: block;
+  margin: auto;
+}
