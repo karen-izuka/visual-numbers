@@ -1,34 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>doodles | visual numbers</title>
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/rainbow.min.css">
-  <link rel="stylesheet" href="/../style.css">
-  <link rel="stylesheet" href="../style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-</head>
-<body>
-  <header>
-    <div class="page-header-title">
-      <img class="page-header-image" src="/assets/images/header-image.png">
-      <div class="page-header-text"><a href="/">Visual Numbers</a></div>
-    </div>
-    <div>
-      <ul class="list-nav">
-        <li>
-          <a href="/diary/">back to diary</a>
-        </li>
-        <li>
-          <a href="/diary/entry-04/">next entry</a>
-        </li>
-      </ul>
-    </div>
-  </header>
-  <div class="container">
-    <h1>Pandas with cx_Oracle</h1>
-    <div class="code">
-      <pre><code class="python">
+  <head>
+    <meta charset="utf-8" />
+    <title>doodles | visual numbers</title>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/rainbow.min.css"
+    />
+    <link rel="stylesheet" href="/../style.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="page-header-title">
+        <img class="page-header-image" src="/assets/images/header-image.png" />
+        <div class="page-header-text"><a href="/">Visual Numbers</a></div>
+      </div>
+      <div>
+        <ul class="list-nav">
+          <li>
+            <a href="/diary/">back to diary</a>
+          </li>
+          <li>
+            <a href="/diary/entry-04/">next entry</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="container">
+      <h1>Pandas with cx_Oracle</h1>
+      <div class="code">
+        <pre><code class="python">
       import pandas as pd
       import cx_Oracle
 
@@ -43,14 +51,23 @@
                            customer_name,
                            sku""", con=con)
       </code></pre>
+      </div>
+      <div>
+        <p>
+          The cx_Oracle module in Python enables access to an Oracle Database.
+        </p>
+        <br />
+        <p>
+          In this example I demonstrate how to integrate the cx_Oracle module
+          with pandas. Specifically, the cx_Oracle module is used to create the
+          dsn and database connection. This information is then passed into the
+          pandas read_sql method to retrieve the data.
+        </p>
+      </div>
     </div>
-    <div>
-      <p>The cx_Oracle module in Python enables access to an Oracle Database.</p>
-      <br>
-      <p>In this example I demonstrate how to integrate the cx_Oracle module with pandas. Specifically, the cx_Oracle module is used to create the dsn and database connection. This information is then passed into the pandas read_sql method to retrieve the data.</p>
-    </div>
-  </div>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-</body>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </body>
 </html>

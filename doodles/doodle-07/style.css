@@ -5,16 +5,15 @@
   font-weight: 400;
 }
 
-.bar {
-  fill: #f8e1f4;
-  shape-rendering: crispEdges;
-}
-
 .label {
   fill: #ffffff;
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
   font-weight: 400;
+}
+
+.rect {
+  shape-rendering: crispEdges;
 }
 
 #chart {

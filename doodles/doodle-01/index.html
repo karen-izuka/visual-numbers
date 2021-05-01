@@ -1,53 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>doodles | visual numbers</title>
-  <link rel="stylesheet" href="/../style.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-</head>
-<body>
-  <header>
-    <div class="page-header-title">
-      <img class="page-header-image" src="/assets/images/header-image.png">
-      <div class="page-header-text"><a href="/">Visual Numbers</a></div>
+  <head>
+    <meta charset="utf-8" />
+    <title>doodles | visual numbers</title>
+    <link rel="stylesheet" href="/../style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="page-header-title">
+        <img class="page-header-image" src="/assets/images/header-image.png" />
+        <div class="page-header-text"><a href="/">Visual Numbers</a></div>
+      </div>
+      <div>
+        <ul class="list-nav">
+          <li>
+            <a href="/doodles/">back to doodles</a>
+          </li>
+          <li>
+            <a href="/doodles/doodle-02/">next doodle</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="container">
+      <h1 id="title">Custom Color Picker</h1>
+      <div id="color-01"></div>
+      <div id="color-02"></div>
+      <div id="color-03"></div>
+      <div id="color-04"></div>
+      <div id="color-05"></div>
+      <div id="color-06"></div>
+      <div id="color-07"></div>
+      <div id="color-08"></div>
+      <div id="color-09"></div>
+      <input type="text" value="#4b4b4b" id="input-01" />
+      <input type="text" value="#c8c8c8" id="input-02" />
+      <input type="text" value="#f5f5f5" id="input-03" />
+      <input type="text" value="#fc5c9c" id="input-04" />
+      <input type="text" value="#fbc687" id="input-05" />
+      <input type="text" value="#fff591" id="input-06" />
+      <input type="text" value="#b2e672" id="input-07" />
+      <input type="text" value="#11cbd7" id="input-08" />
+      <input type="text" value="#d89cf6" id="input-09" />
+      <div id="description">
+        <p>
+          Update the hex code in each box to see how different colors pair
+          together. To reset all colors refresh the page.
+        </p>
+      </div>
     </div>
-    <div>
-      <ul class="list-nav">
-        <li>
-          <a href="/doodles/">back to doodles</a>
-        </li>
-        <li>
-          <a href="/doodles/doodle-02/">next doodle</a>
-        </li>
-      </ul>
-    </div>
-  </header>
-  <div class="container">
-    <h1 id="title">Custom Color Picker</h1>
-    <div id="color-01"></div>
-    <div id="color-02"></div>
-    <div id="color-03"></div>
-    <div id="color-04"></div>
-    <div id="color-05"></div>
-    <div id="color-06"></div>
-    <div id="color-07"></div>
-    <div id="color-08"></div>
-    <div id="color-09"></div>
-    <input type="text"  value="#4b4b4b" id="input-01">
-    <input type="text"  value="#c8c8c8" id="input-02">
-    <input type="text"  value="#f5f5f5" id="input-03">
-    <input type="text"  value="#fc5c9c" id="input-04">
-    <input type="text"  value="#fbc687" id="input-05">
-    <input type="text"  value="#fff591" id="input-06">
-    <input type="text"  value="#b2e672" id="input-07">
-    <input type="text"  value="#11cbd7" id="input-08">
-    <input type="text"  value="#d89cf6" id="input-09">
-    <div id="description">
-      <p>Update the hex code in each box to see how different colors pair together. To reset all colors refresh the page.</p>
-    </div>
-  </div>
-  <script src="index.js"></script>
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>

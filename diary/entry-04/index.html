@@ -1,48 +1,68 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>doodles | visual numbers</title>
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/rainbow.min.css">
-  <link rel="stylesheet" href="/../style.css">
-  <link rel="stylesheet" href="../style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-</head>
-<body>
-  <header>
-    <div class="page-header-title">
-      <img class="page-header-image" src="/assets/images/header-image.png">
-      <div class="page-header-text"><a href="/">Visual Numbers</a></div>
-    </div>
-    <div>
-      <ul class="list-nav">
-        <li>
-          <a href="/diary/">back to diary</a>
-        </li>
-        <li>
-          <a href="/diary/entry-05/">next entry</a>
-        </li>
-      </ul>
-    </div>
-  </header>
-  <div class="container">
-    <h1>Transform → My Favorite Pandas Function</h1>
-    <div class="code">
-      <pre><code class="python">
+  <head>
+    <meta charset="utf-8" />
+    <title>doodles | visual numbers</title>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/rainbow.min.css"
+    />
+    <link rel="stylesheet" href="/../style.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="page-header-title">
+        <img class="page-header-image" src="/assets/images/header-image.png" />
+        <div class="page-header-text"><a href="/">Visual Numbers</a></div>
+      </div>
+      <div>
+        <ul class="list-nav">
+          <li>
+            <a href="/diary/">back to diary</a>
+          </li>
+          <li>
+            <a href="/diary/entry-05/">next entry</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="container">
+      <h1>Transform → My Favorite Pandas Function</h1>
+      <div class="code">
+        <pre><code class="python">
       import pandas as pd
       
       df = (pd.read_csv('sales_by_customer.csv')
               .assign(reg_sales = lambda x : x.groupby(['region'])['sales'].transform('sum'))
               .assign(customer_pct_region = lambda x : x['sales'] / x['reg_sales']))
       </code></pre>
+      </div>
+      <div>
+        <p>
+          Pairing the group by and transform functions in pandas allows users to
+          calculate values at many levels of granularity all within one
+          dataframe!
+        </p>
+        <br />
+        <p>
+          In this example, I have a table of sales transactions by customer, but
+          want to see how each customer's sales contribute to their particular
+          region. This technique avoids the hassle of having to create a
+          separate dataframe that sums sales by region only to join that
+          dataframe back to the original dataframe by customer.
+        </p>
+      </div>
     </div>
-    <div>
-      <p>Pairing the group by and transform functions in pandas allows users to calculate values at many levels of granularity all within one dataframe!</p>
-      <br>
-      <p>In this example, I have a table of sales transactions by customer, but want to see how each customer's sales contribute to their particular region. This technique avoids the hassle of having to create a separate dataframe that sums sales by region only to join that dataframe back to the original dataframe by customer.</p>
-    </div>
-  </div>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-</body>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </body>
 </html>

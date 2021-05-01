@@ -1,41 +1,72 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>doodles | visual numbers</title>
-  <link rel="stylesheet" href="/../style.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-</head>
-<body>
-  <header>
-    <div class="page-header-title">
-      <img class="page-header-image" src="/assets/images/header-image.png">
-      <div class="page-header-text"><a href="/">Visual Numbers</a></div>
+  <head>
+    <meta charset="utf-8" />
+    <title>doodles | visual numbers</title>
+    <link rel="stylesheet" href="/../style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="page-header-title">
+        <img class="page-header-image" src="/assets/images/header-image.png" />
+        <div class="page-header-text"><a href="/">Visual Numbers</a></div>
+      </div>
+      <div>
+        <ul class="list-nav">
+          <li>
+            <a href="/doodles/">back to doodles</a>
+          </li>
+          <li>
+            <a href="/doodles/doodle-04/">next doodle</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="container">
+      <h1>Animal Crossing New Horizons Villager Analysis</h1>
+      <div id="chart"></div>
+      <div>
+        <p>
+          A breakdown of the 391 Animal Crossing New Horizons villagers by
+          gender → personality → hobby
+        </p>
+        <p>
+          Hover over the diagram to see the flow of villagers between each
+          category
+        </p>
+        <p>
+          Data source from kaggle, available
+          <a
+            href="https://www.kaggle.com/jessicali9530/animal-crossing-new-horizons-nookplaza-dataset"
+            target="_blank"
+            class="inline"
+            >here</a
+          >
+        </p>
+        <p>
+          Script to create nested json file available
+          <a
+            href="https://github.com/karen-izuka/python-scribbles/blob/main/animal-crossing-sankey/main.py"
+            target="_blank"
+            class="inline"
+            >here</a
+          >
+        </p>
+      </div>
     </div>
-    <div>
-      <ul class="list-nav">
-        <li>
-          <a href="/doodles/">back to doodles</a>
-        </li>
-        <li>
-          <a href="/doodles/doodle-04/">next doodle</a>
-        </li>
-      </ul>
-    </div>
-  </header>
-  <div class="container">
-    <h1>Animal Crossing New Horizons Villager Analysis</h1>
-    <div id="chart"></div>
-    <div>
-      <p>A breakdown of the 391 Animal Crossing New Horizons villagers by gender → personality → hobby</p>
-      <p>Hover over the diagram to see the flow of villagers between each category</p>
-      <p>Data source from kaggle, available <a href="https://www.kaggle.com/jessicali9530/animal-crossing-new-horizons-nookplaza-dataset"  target="_blank" class="inline">here</a></p>
-      <p>Script to create nested json file available <a href="https://github.com/karen-izuka/python-scribbles/blob/main/animal-crossing-sankey/main.py"  target="_blank" class="inline">here</a></p>
-    </div>
-  </div>
-  <script src="https://d3js.org/d3.v6.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-sankey/0.12.3/d3-sankey.min.js" integrity="sha512-KK15oKpabNDaLpWinMtNfTqy/V7pzlc2FRG174PfASes7RRx6TAsua8HJdRTKo8+BLvPBKNIkL7kXWcz5HoqqA==" crossorigin="anonymous"></script>
-  <script src="index.js"></script>
-</body>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/d3-sankey/0.12.3/d3-sankey.min.js"
+      integrity="sha512-KK15oKpabNDaLpWinMtNfTqy/V7pzlc2FRG174PfASes7RRx6TAsua8HJdRTKo8+BLvPBKNIkL7kXWcz5HoqqA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
 </html>

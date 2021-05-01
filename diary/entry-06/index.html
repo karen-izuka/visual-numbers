@@ -1,34 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>doodles | visual numbers</title>
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/rainbow.min.css">
-  <link rel="stylesheet" href="/../style.css">
-  <link rel="stylesheet" href="../style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-</head>
-<body>
-  <header>
-    <div class="page-header-title">
-      <img class="page-header-image" src="/assets/images/header-image.png">
-      <div class="page-header-text"><a href="/">Visual Numbers</a></div>
-    </div>
-    <div>
-      <ul class="list-nav">
-        <li>
-          <a href="/diary/">back to diary</a>
-        </li>
-        <li>
-          <a href="/diary/entry-01/">next entry</a>
-        </li>
-      </ul>
-    </div>
-  </header>
-  <div class="container">
-    <h1>Turning Tabular Data into a Nested JSON File</h1>
-    <div class="code">
-      <pre><code class="python">
+  <head>
+    <meta charset="utf-8" />
+    <title>doodles | visual numbers</title>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/rainbow.min.css"
+    />
+    <link rel="stylesheet" href="/../style.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="page-header-title">
+        <img class="page-header-image" src="/assets/images/header-image.png" />
+        <div class="page-header-text"><a href="/">Visual Numbers</a></div>
+      </div>
+      <div>
+        <ul class="list-nav">
+          <li>
+            <a href="/diary/">back to diary</a>
+          </li>
+          <li>
+            <a href="/diary/entry-01/">next entry</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="container">
+      <h1>Turning Tabular Data into a Nested JSON File</h1>
+      <div class="code">
+        <pre><code class="python">
       import click
       import io
       import json
@@ -66,12 +74,20 @@
       if __name__ == '__main__':
         main()
       </code></pre>
+      </div>
+      <div>
+        <p>
+          I often find myself needing data structured as a nested json file for
+          data visualizations such as treemaps, icicle charts and circle packs.
+          However, raw data most often comes in the form of a csv or excel
+          sheet. As such, I created this python function to help me convert
+          tabular data structures into nested json files.
+        </p>
+      </div>
     </div>
-    <div>
-        <p>I often find myself needing data structured as a nested json file for data visualizations such as treemaps, icicle charts and circle packs. However, raw data most often comes in the form of a csv or excel sheet. As such, I created this python function to help me convert tabular data structures into nested json files.</p>
-    </div>
-  </div>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-</body>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </body>
 </html>

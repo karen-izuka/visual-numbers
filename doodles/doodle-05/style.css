@@ -21,7 +21,7 @@ svg {
 .hover-line {
   stroke: #fc5c9c;
   stroke-width: 2px;
-  stroke-dasharray: 3,3;
+  stroke-dasharray: 3, 3;
 }
 
 .line {

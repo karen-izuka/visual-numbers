@@ -1,39 +1,49 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>doodles | visual numbers</title>
-  <link rel="stylesheet" href="/../style.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-</head>
-<body>
-  <header>
-    <div class="page-header-title">
-      <img class="page-header-image" src="/assets/images/header-image.png">
-      <div class="page-header-text"><a href="/">Visual Numbers</a></div>
+  <head>
+    <meta charset="utf-8" />
+    <title>doodles | visual numbers</title>
+    <link rel="stylesheet" href="/../style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="page-header-title">
+        <img class="page-header-image" src="/assets/images/header-image.png" />
+        <div class="page-header-text"><a href="/">Visual Numbers</a></div>
+      </div>
+      <div>
+        <ul class="list-nav">
+          <li>
+            <a href="/doodles/">back to doodles</a>
+          </li>
+          <li>
+            <a href="/doodles/doodle-07/">next doodle</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="container">
+      <h1>2020 Median House Price By County</h1>
+      <div id="chart"></div>
+      <div id="legend"></div>
+      <div>
+        <p>
+          Data set sourced from the National Association of Realtors, linked
+          <a href="https://www.nar.realtor/" target="_blank" class="inline"
+            >here</a
+          >
+        </p>
+      </div>
     </div>
-    <div>
-      <ul class="list-nav">
-        <li>
-          <a href="/doodles/">back to doodles</a>
-        </li>
-        <li>
-          <a href="/doodles/doodle-01/">next doodle</a>
-        </li>
-      </ul>
-    </div>
-  </header>
-  <div class="container">
-    <h1>2020 Median House Price By County</h1>
-    <div id="chart"></div>
-    <div id="legend"></div>
-    <div>
-      <p>Data set sourced from the National Association of Realtors, linked <a href="https://www.nar.realtor/"  target="_blank" class="inline">here</a></p>
-    </div>
-  </div>
-  <script src="https://d3js.org/d3.v6.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.js"></script>
-  <script src="index.js"></script>
-</body>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>

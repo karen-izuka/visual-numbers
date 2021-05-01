@@ -1,34 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>doodles | visual numbers</title>
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/rainbow.min.css">
-  <link rel="stylesheet" href="/../style.css">
-  <link rel="stylesheet" href="../style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-</head>
-<body>
-  <header>
-    <div class="page-header-title">
-      <img class="page-header-image" src="/assets/images/header-image.png">
-      <div class="page-header-text"><a href="/">Visual Numbers</a></div>
-    </div>
-    <div>
-      <ul class="list-nav">
-        <li>
-          <a href="/diary/">back to diary</a>
-        </li>
-        <li>
-          <a href="/diary/entry-03/">next entry</a>
-        </li>
-      </ul>
-    </div>
-  </header>
-  <div class="container">
-    <h1>A Different Way to Write SQL Queries</h1>
-    <div class="code">
-      <pre><code class="sql">
+  <head>
+    <meta charset="utf-8" />
+    <title>doodles | visual numbers</title>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/rainbow.min.css"
+    />
+    <link rel="stylesheet" href="/../style.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="page-header-title">
+        <img class="page-header-image" src="/assets/images/header-image.png" />
+        <div class="page-header-text"><a href="/">Visual Numbers</a></div>
+      </div>
+      <div>
+        <ul class="list-nav">
+          <li>
+            <a href="/diary/">back to diary</a>
+          </li>
+          <li>
+            <a href="/diary/entry-03/">next entry</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="container">
+      <h1>A Different Way to Write SQL Queries</h1>
+      <div class="code">
+        <pre><code class="sql">
       with a as (select date_key,
       sum(units_sold) units_sold
       from fact_table
@@ -47,14 +55,26 @@
       where b.fiscal_year in (2019,2020)
       group by b.fiscal_year;
       </code></pre>
+      </div>
+      <div>
+        <p>
+          The SQL 'with' clause allows users to give a sub-query block a name,
+          which can then be referenced within the main SQL query. It allows
+          users to break down complex SQL queries into smaller pieces which
+          promotes readability and can make debugging less painful.
+        </p>
+        <br />
+        <p>
+          When executed, the query within the 'with' clause is evaluated first
+          and the output of the evaluation is stored in a temporary relation.
+          When the main query is executed it may utilize the temporary relation
+          produced.
+        </p>
+      </div>
     </div>
-    <div>
-      <p>The SQL 'with' clause allows users to give a sub-query block a name, which can then be referenced within the main SQL query. It allows users to break down complex SQL queries into smaller pieces which promotes readability and can make debugging less painful.</p>
-      <br>
-      <p>When executed, the query within the 'with' clause is evaluated first and the output of the evaluation is stored in a temporary relation. When the main query is executed it may utilize the temporary relation produced.</p>
-    </div>
-  </div>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-</body>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </body>
 </html>

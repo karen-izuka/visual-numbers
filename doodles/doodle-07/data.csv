@@ -1,0 +1,15 @@
+year,label,measure,amount,start,pct
+2020,a,Revenue,10509,10509,0
+2020,b,Cogs,7667,10509,0
+2020,a,Gross Profit,2842,2842,0.27
+2020,b,Opex,1542,2842,0
+2020,a,Op Income,1300,1300,0.12
+2020,b,OIE,296,1300,0
+2020,a,Net Income,1004,1004,0.10
+2019,a,Revenue,10390,10390,0
+2019,b,Cogs,7458,10390,0
+2019,a,Gross Profit,2932,2932,0.28
+2019,b,Opex,1445,2932,0
+2019,a,Op Income,1487,1487,0.14
+2019,b,OIE,525,2012,0
+2019,a,Net Income,2012,2012,0.19

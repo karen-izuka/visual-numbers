@@ -1,34 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>doodles | visual numbers</title>
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/rainbow.min.css">
-  <link rel="stylesheet" href="/../style.css">
-  <link rel="stylesheet" href="../style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-</head>
-<body>
-  <header>
-    <div class="page-header-title">
-      <img class="page-header-image" src="/assets/images/header-image.png">
-      <div class="page-header-text"><a href="/">Visual Numbers</a></div>
-    </div>
-    <div>
-      <ul class="list-nav">
-        <li>
-          <a href="/diary/">back to diary</a>
-        </li>
-        <li>
-          <a href="/diary/entry-02/">next entry</a>
-        </li>
-      </ul>
-    </div>
-  </header>
-  <div class="container">
-    <h1>Method Chaining in Pandas</h1>
-    <div class="code">
-      <pre><code class="python">
+  <head>
+    <meta charset="utf-8" />
+    <title>doodles | visual numbers</title>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/rainbow.min.css"
+    />
+    <link rel="stylesheet" href="/../style.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="page-header-title">
+        <img class="page-header-image" src="/assets/images/header-image.png" />
+        <div class="page-header-text"><a href="/">Visual Numbers</a></div>
+      </div>
+      <div>
+        <ul class="list-nav">
+          <li>
+            <a href="/diary/">back to diary</a>
+          </li>
+          <li>
+            <a href="/diary/entry-02/">next entry</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="container">
+      <h1>Method Chaining in Pandas</h1>
+      <div class="code">
+        <pre><code class="python">
       import pandas as pd
 
       df = (pd.read_csv('input_path/input_file.csv')
@@ -42,23 +50,63 @@
               .sort_index(axis=1)
               .to_csv('output_path/output_file.csv', index=False))
       </code></pre>
+      </div>
+      <div>
+        <p>
+          Method chaining provides a pattern for performing operations on a
+          pandas dataframe that emphasizes continuity and a logical flow of
+          execution. Rather than having to name variables at each step, it
+          allows users to chain methods one after the other, each operating on
+          the returned dataframe as the first argument. This substantially
+          increases the readability of the code and typically has better
+          performance than conventional methods.
+        </p>
+        <br />
+        <p>
+          In this example, I have included my favorite "chainable" methods in
+          pandas as well as a short description of how I like to apply them,
+          below.
+        </p>
+        <br />
+        <div class="container-description">
+          <div>query</div>
+          <div>filters rows</div>
+        </div>
+        <div class="container-description">
+          <div>rename</div>
+          <div>renames columns</div>
+        </div>
+        <div class="container-description">
+          <div>groupby</div>
+          <div>
+            splits a dataframe, applies a function and combines the results
+          </div>
+        </div>
+        <div class="container-description">
+          <div>assign</div>
+          <div>creates a new column</div>
+        </div>
+        <div class="container-description">
+          <div>drop</div>
+          <div>drops column(s) from the dataframe</div>
+        </div>
+        <div class="container-description">
+          <div>merge</div>
+          <div>merges dataframes with a database-style join</div>
+        </div>
+        <div class="container-description">
+          <div>fillna</div>
+          <div>fills na values with 0</div>
+        </div>
+        <div class="container-description">
+          <div>sort_index</div>
+          <div>reorders the columns alphabetically</div>
+        </div>
+      </div>
     </div>
-    <div>
-      <p>Method chaining provides a pattern for performing operations on a pandas dataframe that emphasizes continuity and a logical flow of execution. Rather than having to name variables at each step, it allows users to chain methods one after the other, each operating on the returned dataframe as the first argument. This substantially increases the readability of the code and typically has better performance than conventional methods.</p>
-      <br>
-      <p>In this example, I have included my favorite "chainable" methods in pandas as well as a short description of how I like to apply them, below.</p>
-      <br>
-      <div class="container-description"><div>query</div><div>filters rows</div></div>
-      <div class="container-description"><div>rename</div><div>renames columns</div></div>
-      <div class="container-description"><div>groupby</div><div>splits a dataframe, applies a function and combines the results</div></div>
-      <div class="container-description"><div>assign</div><div>creates a new column</div></div>
-      <div class="container-description"><div>drop</div><div>drops column(s) from the dataframe</div></div>
-      <div class="container-description"><div>merge</div><div>merges dataframes with a database-style join</div></div>
-      <div class="container-description"><div>fillna</div><div>fills na values with 0</div></div>
-      <div class="container-description"><div>sort_index</div><div>reorders the columns alphabetically</div></div>
-    </div>
-  </div>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-</body>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </body>
 </html>

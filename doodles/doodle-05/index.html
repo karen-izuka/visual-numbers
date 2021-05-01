@@ -1,38 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>doodles | visual numbers</title>
-  <link rel="stylesheet" href="/../style.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-</head>
-<body>
-  <header>
-    <div class="page-header-title">
-      <img class="page-header-image" src="/assets/images/header-image.png">
-      <div class="page-header-text"><a href="/">Visual Numbers</a></div>
+  <head>
+    <meta charset="utf-8" />
+    <title>doodles | visual numbers</title>
+    <link rel="stylesheet" href="/../style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="page-header-title">
+        <img class="page-header-image" src="/assets/images/header-image.png" />
+        <div class="page-header-text"><a href="/">Visual Numbers</a></div>
+      </div>
+      <div>
+        <ul class="list-nav">
+          <li>
+            <a href="/doodles/">back to doodles</a>
+          </li>
+          <li>
+            <a href="/doodles/doodle-06/">next doodle</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="container">
+      <h1>Seagate Stock Price || 2017-2021</h1>
+      <div id="chart"></div>
+      <div>
+        <p>Hover over the chart to see the stock price by date</p>
+        <p>
+          Historical stock prices sourced from Yahoo! Finance; web scraper
+          available
+          <a
+            href="https://github.com/karen-izuka/python-scribbles/blob/main/stock-price-scraper/main.py"
+            target="_blank"
+            class="inline"
+            >here</a
+          >
+        </p>
+      </div>
     </div>
-    <div>
-      <ul class="list-nav">
-        <li>
-          <a href="/doodles/">back to doodles</a>
-        </li>
-        <li>
-          <a href="/doodles/doodle-06/">next doodle</a>
-        </li>
-      </ul>
-    </div>
-  </header>
-  <div class="container">
-    <h1>Seagate Stock Price || 2017-2021</h1>
-    <div id="chart"></div>
-    <div>
-      <p>Hover over the chart to see the stock price by date</p>
-      <p>Historical stock prices sourced from Yahoo! Finance; web scraper available <a href="https://github.com/karen-izuka/python-scribbles/blob/main/stock-price-scraper/main.py"  target="_blank" class="inline">here</a></p>
-    </div>
-  </div>
-  <script src="https://d3js.org/d3.v6.min.js"></script>
-  <script src="index.js"></script>
-</body>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>

@@ -1,41 +1,60 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>doodles | visual numbers</title>
-  <link rel="stylesheet" href="/../style.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-</head>
-<body>
-  <header>
-    <div class="page-header-title">
-      <img class="page-header-image" src="/assets/images/header-image.png">
-      <div class="page-header-text"><a href="/">Visual Numbers</a></div>
+  <head>
+    <meta charset="utf-8" />
+    <title>doodles | visual numbers</title>
+    <link rel="stylesheet" href="/../style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="page-header-title">
+        <img class="page-header-image" src="/assets/images/header-image.png" />
+        <div class="page-header-text"><a href="/">Visual Numbers</a></div>
+      </div>
+      <div>
+        <ul class="list-nav">
+          <li>
+            <a href="/doodles/">back to doodles</a>
+          </li>
+          <li>
+            <a href="/doodles/doodle-05/">next doodle</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="container">
+      <h1>2020 Temperature By Day (°F)</h1>
+      <div id="chart"></div>
+      <div id="legend"></div>
+      <div>
+        <p>
+          This heatmap tracks the daily temperatures in the following locations:
+        </p>
+        <p>
+          San Francisco, CA ☀ Concord, CA ☀ Los Angeles, CA ☀ New York City, NY
+          ☀ Seattle, WA ☀ Bend, OR
+        </p>
+        <br />
+        <p>
+          Data sourced from NOAA (National Oceanic and Atmospheric
+          Administration), web scraper available
+          <a
+            href="https://github.com/karen-izuka/python-scribbles/blob/main/weather-web-scraper/main.py"
+            target="_blank"
+            class="inline"
+            >here</a
+          >
+        </p>
+      </div>
     </div>
-    <div>
-      <ul class="list-nav">
-        <li>
-          <a href="/doodles/">back to doodles</a>
-        </li>
-        <li>
-          <a href="/doodles/doodle-05/">next doodle</a>
-        </li>
-      </ul>
-    </div>
-  </header>
-  <div class="container">
-    <h1>2020 Temperature By Day (°F)</h1>
-    <div id="chart"></div>
-    <div id="legend"></div>
-    <div>
-      <p>This heatmap tracks the daily temperatures in the following locations:</p>
-      <p>San Francisco, CA ☀ Concord, CA ☀ Los Angeles, CA ☀ New York City, NY ☀ Seattle, WA ☀ Bend, OR</p>
-      <br>
-      <p>Data sourced from NOAA (National Oceanic and Atmospheric Administration), web scraper available <a href="https://github.com/karen-izuka/python-scribbles/blob/main/weather-web-scraper/main.py"  target="_blank" class="inline">here</a></p>
-    </div>
-  </div>
-  <script src="https://d3js.org/d3.v6.min.js"></script>
-  <script src="index.js"></script>
-</body>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>
