@@ -67,18 +67,19 @@ class IncomeChart {
   }
 
   update(data) {
-    const format_01 = d3.format(',');
+    const format_01 = d3.format('.0f');
     const format_02 = d3.format('.0%');
     const bar = this.svg.selectAll('.rect').data(data);
     bar.exit().remove();
     bar
       .attr('x', d => this.x(d.measure))
       .attr('width', this.x.bandwidth())
-      .attr('fill', d => (d.label == 'a' ? '#b2e672' : '#dcdcdc'))
+      .attr('fill', d => (d.label == 'a' ? '#6eb6ff' : '#e0fcff'))
       .transition()
       .duration(1500)
+      .ease(d3.easeQuadInOut)
       .attr('y', d => this.y(d.start))
-      .attr('height', d => this.y(0) - this.y(d.amount));
+      .attr('height', d => Math.max(this.y(0) - this.y(d.amount), 1));
     bar
       .enter()
       .append('rect')
@@ -86,21 +87,22 @@ class IncomeChart {
       .attr('x', d => this.x(d.measure))
       .attr('y', d => this.y(d.start))
       .attr('width', this.x.bandwidth())
-      .attr('height', d => this.y(0) - this.y(d.amount))
-      .attr('fill', d => (d.label == 'a' ? '#b2e672' : '#dcdcdc'));
-      
+      .attr('height', d => Math.max(this.y(0) - this.y(d.amount), 1))
+      .attr('fill', d => (d.label == 'a' ? '#6eb6ff' : '#e0fcff'));
+
     const label = this.svg.selectAll('.label').data(data);
     label.exit().remove();
     label
       .text(d =>
         d.pct == 0
-          ? `$${format_01(d.amount)}`
-          : `$${format_01(d.amount)} | ${format_02(d.pct)}`
+          ? `$${format_01(d.amount / 1000)}B`
+          : `$${format_01(d.amount / 1000)}B | ${format_02(d.pct)}`
       )
       .attr('x', d => this.x(d.measure) + this.x.bandwidth() / 2)
       .attr('text-anchor', 'middle')
       .transition()
       .duration(1500)
+      .ease(d3.easeQuadInOut)
       .attr('y', d => this.y(d.start) - 10);
 
     label
@@ -108,8 +110,8 @@ class IncomeChart {
       .append('text')
       .text(d =>
         d.pct == 0
-          ? `$${format_01(d.amount)}`
-          : `$${format_01(d.amount)} | ${format_02(d.pct)}`
+          ? `$${format_01(d.amount / 1000)}B`
+          : `$${format_01(d.amount / 1000)}B | ${format_02(d.pct)}`
       )
       .attr('class', 'label')
       .attr('x', d => this.x(d.measure) + this.x.bandwidth() / 2)
