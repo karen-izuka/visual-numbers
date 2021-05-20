@@ -31,6 +31,7 @@ table td:nth-child(2) {
 }
 
 .level-02 {
+  display: none;
   visibility: collapse;
 }
 
