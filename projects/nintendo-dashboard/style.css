@@ -1,13 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto+Mono:wght@600;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto+Mono:wght@600;700&display=swap');
+@font-face {
+  font-family: 'hello honey';
+  src: url('/../assets/fonts/hello-honey.woff');
+}
 a {
-  color: #e60012;
+  color: #00b9e1;
   text-decoration: none;
 }
 
+a:hover {
+  color: #e60012;
+}
+
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.1em;
@@ -35,7 +42,7 @@ h2 {
 .dropdown .dropbtn {
   background-color: inherit;
   border: none;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.1em;
@@ -106,12 +113,12 @@ h2 {
 
 .page-header-image {
   display: block;
-  height: 60px;
+  height: 50px;
   margin: auto;
 }
 
 .page-header-title {
-  height: 125px;
+  height: 120px;
   margin: auto;
   padding-bottom: 25px;
   padding-top: 25px;
@@ -119,11 +126,12 @@ h2 {
 }
 
 .page-header-text {
-  color: #e60012;
-  font-family: "Roboto Mono", monospace;
-  font-size: 32px;
-  padding-bottom: 25px;
-  padding-top: 25px;
+  color: #000000;
+  font-family: 'hello honey';
+  font-size: 48px;
+  font-weight: 600;
+  padding-bottom: 15px;
+  padding-top: 15px;
   text-align: center;
   top: 0px;
   vertical-align: middle;
@@ -140,17 +148,4 @@ h2 {
 
 .spacer-top {
   padding-top: 15px;
-}
-
-.takeaway {
-  border: 3px solid;
-  border-color: #e100b9;
-  line-height: 25px;
-  padding-bottom: 15px;
-  padding-top: 15px;
-}
-
-.takeaway-header {
-  font-size: 16px;
-  padding-left: 25px;
 }
