@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto+Mono:wght@600;700&display=swap");
+
+a {
+  color: #e60012;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  color: #e60012;
+  font-size: 18px;
+}
+
+h2 {
+  color: #7d7d7d;
+  font-size: 14px;
+}
+
+.container {
+  display: grid;
+  margin: auto;
+  padding: 0;
+  width: 1200px;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  background-color: inherit;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  margin: 0; /* Important for vertical align on mobile phones */
+  outline: none;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  background-color: #fafafa;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  display: none;
+  min-width: 150px;
+  position: absolute;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #000000;
+  display: block;
+  float: none;
+  padding: 15px;
+  text-align: left;
+  text-decoration: none;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #eeeeee;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  margin: auto;
+  padding: 25px;
+  width: 1200px;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #e60012;
+}
+
+.page-footer-image {
+  display: block;
+  height: 50px;
+  margin: auto;
+}
+
+.page-footer-spacer {
+  padding-top: 75px;
+}
+
+.page-header-image {
+  display: block;
+  height: 60px;
+  margin: auto;
+}
+
+.page-header-title {
+  height: 125px;
+  margin: auto;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  width: 1200px;
+}
+
+.page-header-text {
+  color: #e60012;
+  font-family: "Roboto Mono", monospace;
+  font-size: 32px;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  text-align: center;
+  top: 0px;
+  vertical-align: middle;
+  width: 1200px;
+}
+
+.spacer-between {
+  padding-top: 35px;
+}
+
+.spacer-bottom {
+  padding-top: 5px;
+}
+
+.spacer-top {
+  padding-top: 15px;
+}
+
+.takeaway {
+  border: 3px solid;
+  border-color: #e100b9;
+  line-height: 25px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.takeaway-header {
+  font-size: 16px;
+  padding-left: 25px;
+}

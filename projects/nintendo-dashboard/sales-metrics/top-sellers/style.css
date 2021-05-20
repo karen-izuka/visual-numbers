@@ -1,0 +1,31 @@
+.game {
+  border-bottom: 2px #c8c8c8 dashed;
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: 100px 400px 300px 200px;
+  padding: 25px;
+}
+
+.rank {
+  font-size: 16px;
+  grid-column: 1/1;
+}
+
+.title {
+  font-size: 16px;
+  grid-column: 2/2;
+}
+
+.units {
+  font-size: 16px;
+  grid-column: 3/3;
+}
+
+.image {
+  font-size: 16px;
+  grid-column: 4/4;
+}
+
+.nintendo-sw {
+  height: 150px;
+}

@@ -1,0 +1,40 @@
+svg {
+  overflow: visible;
+}
+
+.axis text {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+.focus circle {
+  fill: #e60012;
+  stroke: #e60012;
+}
+
+.focus text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.hover-line {
+  stroke: #e60012;
+  stroke-width: 2px;
+  stroke-dasharray: 3, 3;
+}
+
+.line {
+  fill: none;
+  stroke: #00b9e1;
+  stroke-width: 2px;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.rect {
+  fill: #ffffff;
+}

@@ -1,0 +1,36 @@
+th {
+  padding: 10px;
+}
+
+th:nth-child(2) {
+  opacity: 0;
+}
+
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+table td:nth-child(1) {
+  text-align: left;
+  width: 50px;
+}
+
+table td:nth-child(2) {
+  text-align: left;
+  width: 250px;
+}
+
+.level-01 {
+  visibility: visible;
+  background-color: #cceeff;
+}
+
+.level-02 {
+  visibility: collapse;
+}
+
+.expand-level-01,
+.expand-level-02 {
+  cursor: pointer;
+}
