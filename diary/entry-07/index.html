@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>doodles | visual numbers</title>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/rainbow.min.css"
+    />
+    <link rel="stylesheet" href="/../style.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="page-header-title">
+        <img class="page-header-image" src="/assets/images/header-image.png" />
+        <div class="page-header-text"><a href="/">Visual Numbers</a></div>
+      </div>
+      <div>
+        <ul class="list-nav">
+          <li>
+            <a href="/diary/">back to diary</a>
+          </li>
+          <li>
+            <a href="/diary/entry-01/">next entry</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="container">
+      <h1>Using M for Data Joins</h1>
+      <div class="code">
+        <pre><code class="language-plaintext">
+      let
+        step_01a = Excel.Workbook(File.Contents(path_a), null, true),
+        step_01b = Excel.Workbook(File.Contents(path_b), null, true),
+        
+        step_02a = step_01a{[Item="Data", Kind="Sheet"]}[Data],
+        step_02b = step_01b{[Item="Data", Kind="Sheet"]}[Data],
+
+        step_03a = Table.PromoteHeaders(step_02a, [PromoteAllScalars=true]),
+        step_03b = Table.PromoteHeaders(step_02b, [PromoteAllScalars=true]),
+
+        step_04a = Table.TransformColumnTypes(step_03a, {
+          {'KEY_A', type text},
+          {'VALUE_A', type number}
+        }),
+        step_04b = Table.TransformColumnTypes(step_03b, {
+          {'KEY_B', type text},
+          {'VALUE_B', type number}
+        }),
+
+        step_05 = Table.Join(
+          step_04a, "KEY_A",
+          step_04b, "KEY_B",
+          JoinKind.LeftOuter)
+      
+      in step_05
+      </code></pre>
+      </div>
+      <div>
+        <p>
+          In this M Script I have brought in two Excel files (step 1),
+          extracted the data (step 2), marked the first row as headers (step 3),
+          set the column data types (step 4), and joined the tables using KEY_A
+          and KEY_B.
+        </p>
+      </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </body>
+</html>
