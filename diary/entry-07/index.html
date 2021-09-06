@@ -59,7 +59,8 @@
         step_05 = Table.Join(
           step_04a, "KEY_A",
           step_04b, "KEY_B",
-          JoinKind.LeftOuter)
+          JoinKind.LeftOuter
+        )
       
       in step_05
       </code></pre>
@@ -69,7 +70,7 @@
           In this M Script I have brought in two Excel files (step 1),
           extracted the data (step 2), marked the first row as headers (step 3),
           set the column data types (step 4), and joined the tables using KEY_A
-          and KEY_B.
+          and KEY_B. The output will be a table that has KEY_A, VALUE_A and VALUE_B.
         </p>
       </div>
     </div>
