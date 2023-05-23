@@ -36,11 +36,11 @@
     <div class="container">
       <h1>Using M for Data Joins</h1>
       <div class="code">
-        <pre><code class="language-plaintext">
+      <pre><code class="language-plaintext">
       let
         step_01a = Excel.Workbook(File.Contents(path_a), null, true),
         step_01b = Excel.Workbook(File.Contents(path_b), null, true),
-        
+
         step_02a = step_01a{[Item="Data", Kind="Sheet"]}[Data],
         step_02b = step_01b{[Item="Data", Kind="Sheet"]}[Data],
 
@@ -61,7 +61,7 @@
           step_04b, "KEY_B",
           JoinKind.LeftOuter
         )
-      
+
       in step_05
       </code></pre>
       </div>

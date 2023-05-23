@@ -36,12 +36,12 @@
     <div class="container">
       <h1>Turning Tabular Data into a Nested JSON File</h1>
       <div class="code">
-        <pre><code class="python">
+      <pre><code class="python">
       import click
       import io
       import json
       import pandas as pd
-      
+
       def main():
         try:
           input_file = 'input_location/input_file.csv'
@@ -55,7 +55,7 @@
           click.echo(f'Success!')
         except Exception as e:
           click.echo(f'Process failed because {e}')
-    
+
       def create_entries(df):
         entries = []
         #base case - only 2 columns left
