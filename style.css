@@ -77,9 +77,7 @@ pre {
   width: 800px;
 }
 
-.fa-envelope,
-.fa-github,
-.fa-linkedin {
+.fa-envelope, .fa-github, .fa-linkedin {
   background: -webkit-linear-gradient(#fc5c9c, #fc5c9c);
   background-clip: text;
   font-size: 20px;
@@ -88,9 +86,7 @@ pre {
   -webkit-text-fill-color: transparent;
 }
 
-.fa-calendar-check,
-.fa-comment-alt,
-.fa-heart {
+.fa-calendar-check, .fa-comment-alt, .fa-heart {
   color: #fc5c9c;
   font-size: 14px;
 }
