@@ -65,7 +65,11 @@
       <div>
         <p>
           A postgres trigger is a function that is automatically invoked
-          whenever an event such as insert, update or delete occurs.
+          when a specified database event occurs. A postgres trigger can
+          be specified to fire before, after or instead of the operation.
+          A trigger that is marked for each row is called once for each row
+          that the operation modifies while a trigger that is marked for
+          each statement is only called once per operation.
         </p>
         <br />
         <p>
