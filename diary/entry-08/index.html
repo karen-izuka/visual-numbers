@@ -53,11 +53,11 @@
         $$ language plpgsql;
 
         -- drop trigger
-        drop trigger if exists tr_update_account_id_revenue_register on finance.revenue_register cascade;
+        drop trigger if exists tr_update_account_id_rev_reg on finance.rev_reg cascade;
 
         -- create trigger
-        create trigger tr_update_account_id_revenue_register
-        before insert on finance.revenue_register
+        create trigger tr_update_account_id_rev_reg
+        before insert on finance.rev_reg
         for each row
         execute procedure finance.fn_update_account_id();
         </code></pre>
