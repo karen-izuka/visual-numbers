@@ -77,6 +77,15 @@ pre {
   width: 800px;
 }
 
+.container-links {
+  display: grid;
+  grid-gap: 5px 10px;
+  grid-template-columns: 25px 150px;
+  grid-template-rows: 30px;
+  line-height: 30px;
+  margin: auto;
+}
+
 .fa-envelope,
 .fa-github,
 .fa-linkedin {
@@ -99,6 +108,11 @@ pre {
   color: #fc5c9c;
   font-size: 10px;
   font-weight: bold;
+}
+
+.header {
+  color: #fc5c9c;
+  padding-bottom: 20px;
 }
 
 .list-nav {
