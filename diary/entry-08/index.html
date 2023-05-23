@@ -37,59 +37,39 @@
       <h1>Trigger Functions in Postgres</h1>
       <div class="code">
         <pre><code class="sql">
+        -- drop function
+        drop function if exists finance.fn_update_account_id() cascade;
 
+        -- create function
+        create function finance.fn_update_account_id() returns trigger as $$
+        begin
+            new.sfdc_account_id := (
+                select sfdc.account_id
+                from dim.account_master
+                where new.gl_customer_name = dim.account_master.account_name
+            );
+            return new;
+        end;
+        $$ language plpgsql;
+
+        -- drop trigger
+        drop trigger if exists tr_update_account_id_revenue_register on finance.revenue_register cascade;
+
+        -- create trigger
+        create trigger tr_update_account_id_revenue_register
+        before insert on finance.revenue_register
+        for each row
+        execute procedure finance.fn_update_account_id();
         </code></pre>
       </div>
       <div>
         <p>
-          Method chaining provides a pattern for performing operations on a
-          pandas dataframe that emphasizes continuity and a logical flow of
-          execution. Rather than having to name variables at each step, it
-          allows users to chain methods one after the other, each operating on
-          the returned dataframe as the first argument. This substantially
-          increases the readability of the code and typically has better
-          performance than conventional methods.
+          Trigger functions...
         </p>
         <br />
         <p>
-          In this example, I have included my favorite "chainable" methods in
-          pandas as well as a short description of how to apply them, below.
+          In this example...
         </p>
-        <br />
-        <div class="container-description">
-          <div>query</div>
-          <div>filters rows</div>
-        </div>
-        <div class="container-description">
-          <div>rename</div>
-          <div>renames columns</div>
-        </div>
-        <div class="container-description">
-          <div>groupby</div>
-          <div>
-            splits a dataframe, applies a function and combines the results
-          </div>
-        </div>
-        <div class="container-description">
-          <div>assign</div>
-          <div>creates a new column</div>
-        </div>
-        <div class="container-description">
-          <div>drop</div>
-          <div>drops column(s) from the dataframe</div>
-        </div>
-        <div class="container-description">
-          <div>merge</div>
-          <div>merges dataframes with a database-style join</div>
-        </div>
-        <div class="container-description">
-          <div>fillna</div>
-          <div>fills na values with 0</div>
-        </div>
-        <div class="container-description">
-          <div>sort_index</div>
-          <div>reorders the columns alphabetically</div>
-        </div>
       </div>
     </div>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
