@@ -4,7 +4,7 @@
 
 .card-grid {
   display: grid;
-  grid-template-columns: 25px 775px;
+  grid-template-columns: 25px 95px 25px 95px;
   line-height: 25px;
   padding-top: 5px;
 }

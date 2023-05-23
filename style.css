@@ -83,15 +83,9 @@ pre {
   -webkit-text-fill-color: transparent;
 }
 
-.fa-calendar-check, .fa-comment-alt, .fa-heart {
+.fa-calendar-check, .fa-code, .fa-comment-alt, .fa-heart {
   color: #fc5c9c;
   font-size: 14px;
-}
-
-.fa-terminal {
-  color: #fc5c9c;
-  font-size: 10px;
-  font-weight: bold;
 }
 
 .list-nav {
