@@ -40,15 +40,15 @@
       import pandas as pd
 
       df = (pd.read_csv('input_path/input_file.csv')
-              .query('column_a == `target value`')
-              .rename(columns={'column_y': 'column_b'})
-              .groupby(['column_a','column_b'], as_index=False).agg({'column_c': 'sum'})
-              .assign(new_column = lambda x: x['column_c'] * 100)
-              .drop(columns=['column_c'])
-              .merge(df_other, left_on='column_a', right_on='column_a', how='left')
-              .fillna(0)
-              .sort_index(axis=1)
-              .to_csv('output_path/output_file.csv', index=False))
+        .query('column_a == `target value`')
+        .rename(columns={'column_y': 'column_b'})
+        .groupby(['column_a','column_b'], as_index=False).agg({'column_c': 'sum'})
+        .assign(new_column = lambda x: x['column_c'] * 100)
+        .drop(columns=['column_c'])
+        .merge(df_other, left_on='column_a', right_on='column_a', how='left')
+        .fillna(0)
+        .sort_index(axis=1)
+        .to_csv('output_path/output_file.csv', index=False))
       </code></pre>
       </div>
       <div>
