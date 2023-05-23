@@ -37,10 +37,8 @@
       <h1>Trigger Functions in Postgres</h1>
       <div class="code">
         <pre><code class="sql">
-        -- drop function
         drop function if exists finance.fn_update_account_id() cascade;
 
-        -- create function
         create function finance.fn_update_account_id() returns trigger as $$
         begin
             new.sfdc_account_id := (
@@ -52,10 +50,8 @@
         end;
         $$ language plpgsql;
 
-        -- drop trigger
         drop trigger if exists tr_update_account_id_rev_reg on finance.rev_reg cascade;
 
-        -- create trigger
         create trigger tr_update_account_id_rev_reg
         before insert on finance.rev_reg
         for each row
