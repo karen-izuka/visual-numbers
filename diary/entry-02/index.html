@@ -40,45 +40,38 @@
       with a as (
         select
           date_key,
-          sum(units_sold) as units_sold
-        from
-          fact_table
-        group by
-          date_key),
+          sum(units_sold) units_sold
+        from fact_table
+        group by date_key),
       b as (
         select
           date_key,
           fiscal_year
-        from
-          date_table
+        from date_table
         group by
           date_key,
           fiscal_year)
       select
         b.fiscal_year,
         sum(a.units_sold) as units_sold
-      from
-        a
-      left outer join
-        b on (a.date_key = b.date_key)
-      where
-        b.fiscal_year in (2019,2020)
-      group by
-        b.fiscal_year;
+      from a
+      left outer join b on (a.date_key = b.date_key)
+      where b.fiscal_year in (2019,2020)
+      group by b.fiscal_year;
       </code></pre>
       </div>
       <div>
         <p>
-          The SQL 'with' clause allows users to give a sub-query block a name,
-          which can then be referenced within the main SQL query. It allows
-          users to break down complex SQL queries into smaller pieces which
-          promotes readability and can make debugging less painful.
+          Common Table Expressions (CTEs) allow users to give a sub-query block
+          a name, which can then be referenced within the main SQL query. It
+          allows users to break down complex SQL queries into smaller pieces
+          which promotes readability and can make debugging less painful.
         </p>
         <br />
         <p>
           When executed, the query within the 'with' clause is evaluated first
           and the output of the evaluation is stored in a temporary relation.
-          When the main query is executed it may utilize the temporary relation
+          When the main query is executed it then utilizes the temporary relation
           produced.
         </p>
       </div>
