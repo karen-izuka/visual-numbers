@@ -42,14 +42,16 @@
 
       dsn = cx_Oracle.makedsn(host='host', port='port', service_name='service_name')
       con = cx_Oracle.connect(user='user_name', password='my_password', dsn=dsn)
-      df = pd.read_sql(f"""select
-                           customer_name,
-                           sku,
-                           sum(units_sold) units_sold
-                           from oracle_schema.oracle_table
-                           group by
-                           customer_name,
-                           sku""", con=con)
+      df = pd.read_sql(f"""
+        select
+          customer_name,
+          sku,
+          sum(units_sold) units_sold
+        from
+          oracle_schema.oracle_table
+        group by
+          customer_name,
+          sku""", con=con)
       </code></pre>
       </div>
       <div>

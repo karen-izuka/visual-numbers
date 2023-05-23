@@ -38,10 +38,10 @@
       <div class="code">
         <pre><code class="python">
       import pandas as pd
-      
+
       df = (pd.read_csv('sales_by_customer.csv')
-              .assign(reg_sales = lambda x : x.groupby(['region'])['sales'].transform('sum'))
-              .assign(customer_pct_region = lambda x : x['sales'] / x['reg_sales']))
+        .assign(reg_sales = lambda x : x.groupby(['region'])['sales'].transform('sum'))
+        .assign(customer_pct_region = lambda x : x['sales'] / x['reg_sales']))
       </code></pre>
       </div>
       <div>
