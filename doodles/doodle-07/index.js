@@ -74,7 +74,7 @@ class IncomeChart {
     bar
       .attr('x', d => this.x(d.measure))
       .attr('width', this.x.bandwidth())
-      .attr('fill', d => (d.label == 'a' ? '#6eb6ff' : '#e0fcff'))
+      .attr('fill', d => (d.label == 'a' ? '#b2e672' : '#fc5c9c'))
       .transition()
       .duration(1500)
       .ease(d3.easeQuadInOut)
@@ -88,7 +88,7 @@ class IncomeChart {
       .attr('y', d => this.y(d.start))
       .attr('width', this.x.bandwidth())
       .attr('height', d => Math.max(this.y(0) - this.y(d.amount), 1))
-      .attr('fill', d => (d.label == 'a' ? '#6eb6ff' : '#e0fcff'));
+      .attr('fill', d => (d.label == 'a' ? '#b2e672' : '#fc5c9c'));
 
     const label = this.svg.selectAll('.label').data(data);
     label.exit().remove();
