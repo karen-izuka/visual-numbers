@@ -1,5 +1,6 @@
 .axis {
   font-size: 12px;
+  font-weight: bold;
 }
 
 .lAxis line,
@@ -9,6 +10,7 @@
 
 .lAxis text {
   font-size: 12px;
+  font-weight: bold;
 }
 
 #legend {
