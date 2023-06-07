@@ -74,7 +74,7 @@ pre {
   width: 800px;
 }
 
-.fa-envelope, .fa-github, .fa-linkedin {
+.fa-envelope, .fa-github, .fa-linkedin, .fa-paperclip {
   background: -webkit-linear-gradient(#fc5c9c, #fc5c9c);
   background-clip: text;
   font-size: 20px;
