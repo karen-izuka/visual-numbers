@@ -16,7 +16,7 @@ const load = async () => {
 
 const draw = data => {
   //chart
-  const margin = { top: 25, right: 15, bottom: 0, left: 65 };
+  const margin = { top: 25, right: 15, bottom: 0, left: 75 };
   const width = 800 - margin.left - margin.right;
   const height = 450 - margin.top - margin.bottom;
   const svg = d3
@@ -32,7 +32,7 @@ const draw = data => {
     .range([0, width]);
   const x2 = d3
     .scaleTime()
-    .domain([new Date('01-01-2020'), new Date('01-01-2021')])
+    .domain([new Date('01-01-2025'), new Date('01-01-2026')])
     .range([0, width]);
   const y = d3
     .scaleBand()
@@ -41,7 +41,7 @@ const draw = data => {
     .padding(0.2);
   const color = d3
     .scaleLinear()
-    .domain([10, 20, 40, 60, 80, 100, 100])
+    .domain([40, 50, 60, 70, 80, 90, 100])
     .range(['#d89cf6', '#11cbd7', '#b2e672', '#fff591', '#fbc687', '#fc5c9c']);
   const xAxis = g =>
     g.call(d3.axisTop(x2).tickSizeOuter(0).tickFormat(d3.timeFormat('%b')));
