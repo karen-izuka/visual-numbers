@@ -41,7 +41,7 @@ const draw = data => {
     .padding(0.2);
   const color = d3
     .scaleLinear()
-    .domain([10, 30, 50, 70, 90, 100])
+    .domain([0, 20, 40, 60, 90, 110])
     .range(['#d89cf6', '#11cbd7', '#b2e672', '#fff591', '#fbc687', '#fc5c9c']);
   const xAxis = g =>
     g.call(d3.axisTop(x2).tickSizeOuter(0).tickFormat(d3.timeFormat('%b')));
