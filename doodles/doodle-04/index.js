@@ -16,7 +16,7 @@ const load = async () => {
 
 const draw = data => {
   //chart
-  const margin = { top: 25, right: 15, bottom: 0, left: 75 };
+  const margin = { top: 25, right: 15, bottom: 0, left: 80 };
   const width = 800 - margin.left - margin.right;
   const height = 450 - margin.top - margin.bottom;
   const svg = d3
@@ -41,7 +41,7 @@ const draw = data => {
     .padding(0.2);
   const color = d3
     .scaleLinear()
-    .domain([40, 50, 60, 70, 80, 90, 100])
+    .domain([10, 30, 50, 70, 90, 100])
     .range(['#d89cf6', '#11cbd7', '#b2e672', '#fff591', '#fbc687', '#fc5c9c']);
   const xAxis = g =>
     g.call(d3.axisTop(x2).tickSizeOuter(0).tickFormat(d3.timeFormat('%b')));
